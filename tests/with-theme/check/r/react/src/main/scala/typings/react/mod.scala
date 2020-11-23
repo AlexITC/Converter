@@ -4,7 +4,6 @@ import typings.react.anon.Html
 import typings.react.reactStrings.foo
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -12,9 +11,9 @@ object mod {
   @js.native
   trait AllHTMLAttributes[T] extends HTMLAttributes[T] {
     
-    var accept: js.UndefOr[String] = js.native
+    var accept: scala.Unit | String = js.native
     
-    var acceptCharset: js.UndefOr[String] = js.native
+    var acceptCharset: scala.Unit | String = js.native
   }
   object AllHTMLAttributes {
     
@@ -25,7 +24,7 @@ object mod {
     }
     
     @scala.inline
-    implicit class AllHTMLAttributesMutableBuilder[Self <: AllHTMLAttributes[_], T] (val x: Self with AllHTMLAttributes[T]) extends AnyVal {
+    implicit class AllHTMLAttributesMutableBuilder[Self <: AllHTMLAttributes[?], T] (val x: Self & AllHTMLAttributes[T]) extends AnyVal {
       
       @scala.inline
       def setAccept(value: String): Self = StObject.set(x, "accept", value.asInstanceOf[js.Any])
@@ -34,10 +33,10 @@ object mod {
       def setAcceptCharset(value: String): Self = StObject.set(x, "acceptCharset", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAcceptCharsetUndefined: Self = StObject.set(x, "acceptCharset", js.undefined)
+      def setAcceptCharsetUndefined: Self = StObject.set(x, "acceptCharset", ())
       
       @scala.inline
-      def setAcceptUndefined: Self = StObject.set(x, "accept", js.undefined)
+      def setAcceptUndefined: Self = StObject.set(x, "accept", ())
     }
   }
   
@@ -50,9 +49,9 @@ object mod {
   @js.native
   trait DOMAttributes[T] extends StObject {
     
-    var children: js.UndefOr[ReactNode] = js.native
+    var children: scala.Unit | ReactNode = js.native
     
-    var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
+    var dangerouslySetInnerHTML: scala.Unit | Html = js.native
   }
   object DOMAttributes {
     
@@ -63,26 +62,26 @@ object mod {
     }
     
     @scala.inline
-    implicit class DOMAttributesMutableBuilder[Self <: DOMAttributes[_], T] (val x: Self with DOMAttributes[T]) extends AnyVal {
+    implicit class DOMAttributesMutableBuilder[Self <: DOMAttributes[?], T] (val x: Self & DOMAttributes[T]) extends AnyVal {
       
       @scala.inline
       def setChildren(value: ReactNode): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+      def setChildrenUndefined: Self = StObject.set(x, "children", ())
       
       @scala.inline
       def setDangerouslySetInnerHTML(value: Html): Self = StObject.set(x, "dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDangerouslySetInnerHTMLUndefined: Self = StObject.set(x, "dangerouslySetInnerHTML", js.undefined)
+      def setDangerouslySetInnerHTMLUndefined: Self = StObject.set(x, "dangerouslySetInnerHTML", ())
     }
   }
   
   @js.native
   trait HTMLAttributes[T] extends DOMAttributes[T] {
     
-    var defaultChecked: js.UndefOr[Boolean] = js.native
+    var defaultChecked: scala.Unit | Boolean = js.native
   }
   object HTMLAttributes {
     
@@ -93,13 +92,13 @@ object mod {
     }
     
     @scala.inline
-    implicit class HTMLAttributesMutableBuilder[Self <: HTMLAttributes[_], T] (val x: Self with HTMLAttributes[T]) extends AnyVal {
+    implicit class HTMLAttributesMutableBuilder[Self <: HTMLAttributes[?], T] (val x: Self & HTMLAttributes[T]) extends AnyVal {
       
       @scala.inline
       def setDefaultChecked(value: Boolean): Self = StObject.set(x, "defaultChecked", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDefaultCheckedUndefined: Self = StObject.set(x, "defaultChecked", js.undefined)
+      def setDefaultCheckedUndefined: Self = StObject.set(x, "defaultChecked", ())
     }
   }
   
@@ -124,7 +123,7 @@ object mod {
     }
     
     @scala.inline
-    implicit class HTMLPropsMutableBuilder[Self <: HTMLProps[_], T] (val x: Self with HTMLProps[T]) extends AnyVal {
+    implicit class HTMLPropsMutableBuilder[Self <: HTMLProps[?], T] (val x: Self & HTMLProps[T]) extends AnyVal {
       
       @scala.inline
       def setDefaultValue(value: foo): Self = StObject.set(x, "defaultValue", value.asInstanceOf[js.Any])

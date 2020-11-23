@@ -8,7 +8,6 @@ import typingsJapgolly.componentstest.mod.CardGridProps
 import typingsJapgolly.componentstest.mod.CardProps
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Card {

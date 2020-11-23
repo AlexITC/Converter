@@ -5,7 +5,6 @@ import typingsJapgolly.react.mod.HTMLProps
 import typingsJapgolly.reactBootstrap.mod.Sizes
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object buttonGroupMod {
@@ -22,15 +21,15 @@ object buttonGroupMod {
   @js.native
   trait ButtonGroupProps extends HTMLProps[ButtonGroup] {
     
-    var block: js.UndefOr[Boolean] = js.native
+    var block: scala.Unit | Boolean = js.native
     
-    var bsSize: js.UndefOr[Sizes] = js.native
+    var bsSize: scala.Unit | Sizes = js.native
     
-    var bsStyle: js.UndefOr[String] = js.native
+    var bsStyle: scala.Unit | String = js.native
     
-    var justified: js.UndefOr[Boolean] = js.native
+    var justified: scala.Unit | Boolean = js.native
     
-    var vertical: js.UndefOr[Boolean] = js.native
+    var vertical: scala.Unit | Boolean = js.native
   }
   object ButtonGroupProps {
     
@@ -47,31 +46,31 @@ object buttonGroupMod {
       def setBlock(value: Boolean): Self = StObject.set(x, "block", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setBlockUndefined: Self = StObject.set(x, "block", js.undefined)
+      def setBlockUndefined: Self = StObject.set(x, "block", ())
       
       @scala.inline
       def setBsSize(value: Sizes): Self = StObject.set(x, "bsSize", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setBsSizeUndefined: Self = StObject.set(x, "bsSize", js.undefined)
+      def setBsSizeUndefined: Self = StObject.set(x, "bsSize", ())
       
       @scala.inline
       def setBsStyle(value: String): Self = StObject.set(x, "bsStyle", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setBsStyleUndefined: Self = StObject.set(x, "bsStyle", js.undefined)
+      def setBsStyleUndefined: Self = StObject.set(x, "bsStyle", ())
       
       @scala.inline
       def setJustified(value: Boolean): Self = StObject.set(x, "justified", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setJustifiedUndefined: Self = StObject.set(x, "justified", js.undefined)
+      def setJustifiedUndefined: Self = StObject.set(x, "justified", ())
       
       @scala.inline
       def setVertical(value: Boolean): Self = StObject.set(x, "vertical", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setVerticalUndefined: Self = StObject.set(x, "vertical", js.undefined)
+      def setVerticalUndefined: Self = StObject.set(x, "vertical", ())
     }
   }
 }

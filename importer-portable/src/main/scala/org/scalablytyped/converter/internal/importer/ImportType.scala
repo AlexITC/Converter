@@ -57,7 +57,7 @@ class ImportType(stdNames: QualifiedName.StdNames) {
       TsQIdent.string -> StringM,
       TsQIdent.String -> StringM,
       TsQIdent.symbol -> RefMapping(TypeRef(stdNames.Symbol), TypeRef(stdNames.Symbol), TypeRef.Symbol),
-      TsQIdent.undefined -> RefMapping(TypeRef.Any, TypeRef.Any, TypeRef.UndefOr(TypeRef.Nothing)),
+      TsQIdent.undefined -> RefMapping(TypeRef.Any, TypeRef.Any, TypeRef.Unit),
       TsQIdent.void -> RefMapping(TypeRef.Any, TypeRef.Any, TypeRef.Unit),
     )
   }
@@ -73,14 +73,26 @@ class ImportType(stdNames: QualifiedName.StdNames) {
 
         apply(wildcards, scope, importName)(withComments)
 
-      case TsTypeRef(cs, base: TsQIdent, targs: IArray[TsType]) =>
+      case tr @ TsTypeRef(cs, base: TsQIdent, targs: IArray[TsType]) =>
         base match {
           case TsQIdent.any | TsQIdent.unknown =>
             (if (wildcards.allowed) TypeRef.Wildcard else TypeRef.Any).withComments(cs)
 
           case other =>
+            // avoid "unreducible application of higher-kinded type [T] =>>"
+            // unions or types would effectively be existential types, which are no longer supported
+            lazy val nextWildcards = {
+              ts.FollowAliases(scope, skipValidation = true)(tr) match {
+                case TsTypeUnion(_)             => Wildcards.No
+                case TsTypeIntersect(_)         => Wildcards.No
+                case TsTypeFunction(_)          => Wildcards.No
+                case TsTypeConditional(_, _, _) => Wildcards.No
+                case _                          => wildcards.maybeAllow
+              }
+            }
+
             lazy val isInheritance = IsInheritance(other, scope)
-            lazy val targs2        = targs.map(apply(wildcards.maybeAllow, scope, importName))
+            lazy val targs2        = targs.map(apply(nextWildcards, scope, importName))
 
             Mappings.get(other) match {
               case Some(m: RefMapping)  => m.pick(isInheritance).withComments(cs)
@@ -188,11 +200,13 @@ class ImportType(stdNames: QualifiedName.StdNames) {
             }
           }
 
-        val rewritten = patched.map {
+        val (undefineds, rest) = patched.partitionCollect {
           case TsTypeRef.undefined => TypeRef.undefined
-          case other               => apply(wildcards, scope, importName)(other)
         }
-        TypeRef.Union(rewritten, NoComments, sort = false)
+        val rewritten = rest.collect {
+          case other => apply(if (undefineds.nonEmpty) Wildcards.No else wildcards, scope, importName)(other)
+        }
+        TypeRef.Union(undefineds ++ rewritten, NoComments, sort = false)
 
       case TsTypeIntersect(types) =>
         TypeRef.Intersection(types.map(apply(Wildcards.No, scope, importName)), NoComments)

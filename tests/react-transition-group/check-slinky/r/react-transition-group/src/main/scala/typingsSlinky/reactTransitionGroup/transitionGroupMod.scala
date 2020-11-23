@@ -8,7 +8,6 @@ import typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.abbr
 import typingsSlinky.reactTransitionGroup.reactTransitionGroupStrings.animate
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object transitionGroupMod {
@@ -19,20 +18,20 @@ object transitionGroupMod {
     extends Component[TransitionGroupProps[abbr, js.Any], js.Object]
   
   @js.native
-  trait ComponentTransitionGroupProps[T /* <: ReactType[_] */] extends StObject {
+  trait ComponentTransitionGroupProps[T /* <: ReactType[js.Any] */] extends StObject {
     
     var component: T = js.native
   }
   object ComponentTransitionGroupProps {
     
     @scala.inline
-    def apply[T /* <: ReactType[_] */](component: T): ComponentTransitionGroupProps[T] = {
+    def apply[T /* <: ReactType[js.Any] */](component: T): ComponentTransitionGroupProps[T] = {
       val __obj = js.Dynamic.literal(component = component.asInstanceOf[js.Any])
       __obj.asInstanceOf[ComponentTransitionGroupProps[T]]
     }
     
     @scala.inline
-    implicit class ComponentTransitionGroupPropsMutableBuilder[Self <: ComponentTransitionGroupProps[_], T /* <: ReactType[_] */] (val x: Self with ComponentTransitionGroupProps[T]) extends AnyVal {
+    implicit class ComponentTransitionGroupPropsMutableBuilder[Self <: ComponentTransitionGroupProps[?], T /* <: ReactType[js.Any] */] (val x: Self & ComponentTransitionGroupProps[T]) extends AnyVal {
       
       @scala.inline
       def setComponent(value: T): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
@@ -42,7 +41,7 @@ object transitionGroupMod {
   @js.native
   trait IntrinsicTransitionGroupProps[T /* <: abbr | animate */] extends StObject {
     
-    var component: js.UndefOr[T] = js.native
+    var component: scala.Unit | T = js.native
   }
   object IntrinsicTransitionGroupProps {
     
@@ -53,17 +52,17 @@ object transitionGroupMod {
     }
     
     @scala.inline
-    implicit class IntrinsicTransitionGroupPropsMutableBuilder[Self <: IntrinsicTransitionGroupProps[_], T /* <: abbr | animate */] (val x: Self with IntrinsicTransitionGroupProps[T]) extends AnyVal {
+    implicit class IntrinsicTransitionGroupPropsMutableBuilder[Self <: IntrinsicTransitionGroupProps[?], T /* <: abbr | animate */] (val x: Self & IntrinsicTransitionGroupProps[T]) extends AnyVal {
       
       @scala.inline
       def setComponent(value: T): Self = StObject.set(x, "component", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setComponentUndefined: Self = StObject.set(x, "component", js.undefined)
+      def setComponentUndefined: Self = StObject.set(x, "component", ())
     }
   }
   
   type TransitionGroup = ReactComponentClass[TransitionGroupProps[abbr, js.Any]]
   
-  type TransitionGroupProps[T /* <: abbr | animate */, V /* <: ReactType[_] */] = (IntrinsicTransitionGroupProps[T] with (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] */ js.Any)) | (ComponentTransitionGroupProps[V] with ChildFactory)
+  type TransitionGroupProps[T /* <: abbr | animate */, V /* <: ReactType[js.Any] */] = (IntrinsicTransitionGroupProps[T] & (/* import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] */ js.Any)) | (ComponentTransitionGroupProps[V] & ChildFactory)
 }

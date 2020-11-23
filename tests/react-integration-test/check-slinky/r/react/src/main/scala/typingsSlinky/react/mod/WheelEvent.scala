@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticWheelEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -31,7 +30,7 @@ object WheelEvent {
     clientX: Double,
     clientY: Double,
     ctrlKey: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     deltaMode: Double,
     deltaX: Double,
@@ -65,7 +64,7 @@ object WheelEvent {
   }
   
   @scala.inline
-  implicit class WheelEventMutableBuilder[Self <: SyntheticWheelEvent[_], T] (val x: Self with SyntheticWheelEvent[T]) extends AnyVal {
+  implicit class WheelEventMutableBuilder[Self <: SyntheticWheelEvent[?], T] (val x: Self & SyntheticWheelEvent[T]) extends AnyVal {
     
     @scala.inline
     def setDeltaMode(value: Double): Self = StObject.set(x, "deltaMode", value.asInstanceOf[js.Any])

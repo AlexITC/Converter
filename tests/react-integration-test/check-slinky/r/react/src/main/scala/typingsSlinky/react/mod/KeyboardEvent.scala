@@ -5,11 +5,10 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticKeyboardEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait KeyboardEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait KeyboardEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var altKey: Boolean = js.native
   
@@ -50,7 +49,7 @@ object KeyboardEvent {
     cancelable: Boolean,
     charCode: Double,
     ctrlKey: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     getModifierState: String => Boolean,
@@ -79,7 +78,7 @@ object KeyboardEvent {
   }
   
   @scala.inline
-  implicit class KeyboardEventMutableBuilder[Self <: SyntheticKeyboardEvent[_], T] (val x: Self with SyntheticKeyboardEvent[T]) extends AnyVal {
+  implicit class KeyboardEventMutableBuilder[Self <: SyntheticKeyboardEvent[?], T] (val x: Self & SyntheticKeyboardEvent[T]) extends AnyVal {
     
     @scala.inline
     def setAltKey(value: Boolean): Self = StObject.set(x, "altKey", value.asInstanceOf[js.Any])

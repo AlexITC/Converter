@@ -2,7 +2,6 @@ package typingsJapgolly.semanticUiReact
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object genericMod {
@@ -16,7 +15,7 @@ package object genericMod {
   type SemanticShorthandItemFunc[TProps] = js.Function3[
     /* component */ typingsJapgolly.react.mod.ReactType[TProps], 
     /* props */ TProps, 
-    /* children */ js.UndefOr[japgolly.scalajs.react.raw.React.Node | typingsJapgolly.react.mod.ReactNodeArray], 
+    /* children */ scala.Unit | japgolly.scalajs.react.raw.React.Node | typingsJapgolly.react.mod.ReactNodeArray, 
     japgolly.scalajs.react.raw.React.Element | scala.Null
   ]
 }

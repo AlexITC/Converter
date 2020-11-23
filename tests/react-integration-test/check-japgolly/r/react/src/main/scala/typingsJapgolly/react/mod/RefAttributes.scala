@@ -4,13 +4,12 @@ import japgolly.scalajs.react.Callback
 import japgolly.scalajs.react.raw.React.RefHandle
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RefAttributes[T] extends Attributes {
   
-  var ref: js.UndefOr[japgolly.scalajs.react.raw.React.Ref] = js.native
+  var ref: scala.Unit | japgolly.scalajs.react.raw.React.Ref = js.native
 }
 object RefAttributes {
   
@@ -21,7 +20,7 @@ object RefAttributes {
   }
   
   @scala.inline
-  implicit class RefAttributesMutableBuilder[Self <: RefAttributes[_], T] (val x: Self with RefAttributes[T]) extends AnyVal {
+  implicit class RefAttributesMutableBuilder[Self <: RefAttributes[?], T] (val x: Self & RefAttributes[T]) extends AnyVal {
     
     @scala.inline
     def setRef(value: japgolly.scalajs.react.raw.React.Ref): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
@@ -36,6 +35,6 @@ object RefAttributes {
     def setRefRefObject(value: RefHandle[T]): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRefUndefined: Self = StObject.set(x, "ref", js.undefined)
+    def setRefUndefined: Self = StObject.set(x, "ref", ())
   }
 }

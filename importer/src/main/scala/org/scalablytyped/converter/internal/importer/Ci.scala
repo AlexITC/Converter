@@ -116,8 +116,10 @@ object Ci {
                 stdLibs              = SortedSet("esnext.full"),
                 expandTypeMappings   = EnabledTypeMappingExpansion.DefaultSelection,
                 versions = Versions(
-                  if (flags contains "-scala212") Versions.Scala212 else Versions.Scala213,
-                  if (flags contains ("-scalajs06")) Versions.ScalaJs06 else Versions.ScalaJs1,
+                  if (flags contains "-dotty") Versions.Dotty
+                  else if (flags contains "-scala212") Versions.Scala212
+                  else Versions.Scala213,
+                  Versions.ScalaJs1,
                 ),
                 organization           = organization,
                 enableReactTreeShaking = Selection.None,

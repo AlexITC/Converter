@@ -8,13 +8,12 @@ import typingsJapgolly.react.reactStrings.mount
 import typingsJapgolly.react.reactStrings.update
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ProfilerProps extends StObject {
   
-  var children: js.UndefOr[Node] = js.native
+  var children: scala.Unit | Node = js.native
   
   var id: String = js.native
   
@@ -38,7 +37,7 @@ object ProfilerProps {
     def setChildren(value: VdomNode): Self = StObject.set(x, "children", value.rawNode.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+    def setChildrenUndefined: Self = StObject.set(x, "children", ())
     
     @scala.inline
     def setChildrenVdomElement(value: VdomElement): Self = StObject.set(x, "children", value.rawElement.asInstanceOf[js.Any])

@@ -6,11 +6,10 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticClipboardEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ClipboardEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait ClipboardEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var clipboardData: DataTransfer = js.native
 }
@@ -21,7 +20,7 @@ object ClipboardEvent {
     bubbles: Boolean,
     cancelable: Boolean,
     clipboardData: DataTransfer,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     isDefaultPrevented: () => Boolean,
@@ -41,7 +40,7 @@ object ClipboardEvent {
   }
   
   @scala.inline
-  implicit class ClipboardEventMutableBuilder[Self <: SyntheticClipboardEvent[_], T] (val x: Self with SyntheticClipboardEvent[T]) extends AnyVal {
+  implicit class ClipboardEventMutableBuilder[Self <: SyntheticClipboardEvent[?], T] (val x: Self & SyntheticClipboardEvent[T]) extends AnyVal {
     
     @scala.inline
     def setClipboardData(value: DataTransfer): Self = StObject.set(x, "clipboardData", value.asInstanceOf[js.Any])

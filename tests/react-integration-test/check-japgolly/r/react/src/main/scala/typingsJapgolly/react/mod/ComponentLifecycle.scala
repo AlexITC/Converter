@@ -3,7 +3,6 @@ package typingsJapgolly.react.mod
 import japgolly.scalajs.react.Callback
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //
@@ -21,24 +20,22 @@ trait ComponentLifecycle[P, S, SS]
     * Catches exceptions generated in descendant components. Unhandled exceptions will cause
     * the entire component tree to unmount.
     */
-  var componentDidCatch: js.UndefOr[
-    js.Function2[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Error */ /* error */ js.Any, 
-      /* errorInfo */ ErrorInfo, 
-      Unit
-    ]
-  ] = js.native
+  var componentDidCatch: scala.Unit | (js.Function2[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Error */ /* error */ js.Any, 
+    /* errorInfo */ ErrorInfo, 
+    Unit
+  ]) = js.native
   
   /**
     * Called immediately after a component is mounted. Setting state here will trigger re-rendering.
     */
-  var componentDidMount: js.UndefOr[js.Function0[Unit]] = js.native
+  var componentDidMount: scala.Unit | js.Function0[Unit] = js.native
   
   /**
     * Called immediately before a component is destroyed. Perform any necessary cleanup in this method, such as
     * cancelled network requests, or cleaning up any DOM elements created in `componentDidMount`.
     */
-  var componentWillUnmount: js.UndefOr[js.Function0[Unit]] = js.native
+  var componentWillUnmount: scala.Unit | js.Function0[Unit] = js.native
   
   /**
     * Called to determine whether the change in props and state should trigger a re-render.
@@ -50,9 +47,7 @@ trait ComponentLifecycle[P, S, SS]
     * If false is returned, `Component#render`, `componentWillUpdate`
     * and `componentDidUpdate` will not be called.
     */
-  var shouldComponentUpdate: js.UndefOr[
-    js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Boolean]
-  ] = js.native
+  var shouldComponentUpdate: scala.Unit | (js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Boolean]) = js.native
 }
 object ComponentLifecycle {
   
@@ -63,7 +58,7 @@ object ComponentLifecycle {
   }
   
   @scala.inline
-  implicit class ComponentLifecycleMutableBuilder[Self <: ComponentLifecycle[_, _, _], P, S, SS] (val x: Self with (ComponentLifecycle[P, S, SS])) extends AnyVal {
+  implicit class ComponentLifecycleMutableBuilder[Self <: ComponentLifecycle[?, ?, ?], P, S, SS] (val x: Self & (ComponentLifecycle[P, S, SS])) extends AnyVal {
     
     @scala.inline
     def setComponentDidCatch(
@@ -71,24 +66,24 @@ object ComponentLifecycle {
     ): Self = StObject.set(x, "componentDidCatch", js.Any.fromFunction2((t0: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Error */ /* error */ js.Any, t1: /* errorInfo */ ErrorInfo) => (value(t0, t1)).runNow()))
     
     @scala.inline
-    def setComponentDidCatchUndefined: Self = StObject.set(x, "componentDidCatch", js.undefined)
+    def setComponentDidCatchUndefined: Self = StObject.set(x, "componentDidCatch", ())
     
     @scala.inline
     def setComponentDidMount(value: Callback): Self = StObject.set(x, "componentDidMount", value.toJsFn)
     
     @scala.inline
-    def setComponentDidMountUndefined: Self = StObject.set(x, "componentDidMount", js.undefined)
+    def setComponentDidMountUndefined: Self = StObject.set(x, "componentDidMount", ())
     
     @scala.inline
     def setComponentWillUnmount(value: Callback): Self = StObject.set(x, "componentWillUnmount", value.toJsFn)
     
     @scala.inline
-    def setComponentWillUnmountUndefined: Self = StObject.set(x, "componentWillUnmount", js.undefined)
+    def setComponentWillUnmountUndefined: Self = StObject.set(x, "componentWillUnmount", ())
     
     @scala.inline
     def setShouldComponentUpdate(value: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Boolean): Self = StObject.set(x, "shouldComponentUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setShouldComponentUpdateUndefined: Self = StObject.set(x, "shouldComponentUpdate", js.undefined)
+    def setShouldComponentUpdateUndefined: Self = StObject.set(x, "shouldComponentUpdate", ())
   }
 }

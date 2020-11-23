@@ -5,11 +5,10 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticCompositionEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CompositionEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait CompositionEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var data: String = js.native
 }
@@ -19,7 +18,7 @@ object CompositionEvent {
   def apply[T](
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     data: String,
     defaultPrevented: Boolean,
     eventPhase: Double,
@@ -40,7 +39,7 @@ object CompositionEvent {
   }
   
   @scala.inline
-  implicit class CompositionEventMutableBuilder[Self <: SyntheticCompositionEvent[_], T] (val x: Self with SyntheticCompositionEvent[T]) extends AnyVal {
+  implicit class CompositionEventMutableBuilder[Self <: SyntheticCompositionEvent[?], T] (val x: Self & SyntheticCompositionEvent[T]) extends AnyVal {
     
     @scala.inline
     def setData(value: String): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])

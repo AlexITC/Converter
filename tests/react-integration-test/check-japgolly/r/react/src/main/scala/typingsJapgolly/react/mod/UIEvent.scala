@@ -8,11 +8,10 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UIEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait UIEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var detail: Double = js.native
   
@@ -24,7 +23,7 @@ object UIEvent {
   def apply[T](
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     detail: Double,
     eventPhase: Double,
@@ -39,14 +38,14 @@ object UIEvent {
     timeStamp: Double,
     `type`: String,
     view: AbstractView
-  ): ReactUIEventFrom[T with Element] = {
+  ): ReactUIEventFrom[T & Element] = {
     val __obj = js.Dynamic.literal(bubbles = bubbles.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], isDefaultPrevented = isDefaultPrevented.toJsFn, isPropagationStopped = isPropagationStopped.toJsFn, isTrusted = isTrusted.asInstanceOf[js.Any], nativeEvent = nativeEvent.asInstanceOf[js.Any], persist = persist.toJsFn, preventDefault = preventDefault.toJsFn, stopPropagation = stopPropagation.toJsFn, target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReactUIEventFrom[T with Element]]
+    __obj.asInstanceOf[ReactUIEventFrom[T & Element]]
   }
   
   @scala.inline
-  implicit class UIEventMutableBuilder[Self <: ReactUIEventFrom[Element], T] (val x: Self with (ReactUIEventFrom[T with Element])) extends AnyVal {
+  implicit class UIEventMutableBuilder[Self <: ReactUIEventFrom[Element], T] (val x: Self & (ReactUIEventFrom[T & Element])) extends AnyVal {
     
     @scala.inline
     def setDetail(value: Double): Self = StObject.set(x, "detail", value.asInstanceOf[js.Any])

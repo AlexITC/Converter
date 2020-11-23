@@ -8,7 +8,6 @@ import typings.std.CanvasRenderingContext2D
 import typings.std.HTMLCanvasElement
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* static members */
@@ -61,9 +60,9 @@ object mod {
     def getElementsAtEvent(e: js.Any): js.Array[js.Object] = js.native
     
     def render(): js.Object = js.native
-    def render(duration: js.UndefOr[scala.Nothing], `lazy`: js.Any): js.Object = js.native
     def render(duration: js.Any): js.Object = js.native
     def render(duration: js.Any, `lazy`: js.Any): js.Object = js.native
+    def render(duration: Unit, `lazy`: js.Any): js.Object = js.native
     
     def resize(): js.Object = js.native
     
@@ -72,15 +71,15 @@ object mod {
     def toBase64(): String = js.native
     
     def update(): js.Object = js.native
-    def update(duration: js.UndefOr[scala.Nothing], `lazy`: js.Any): js.Object = js.native
     def update(duration: js.Any): js.Object = js.native
     def update(duration: js.Any, `lazy`: js.Any): js.Object = js.native
+    def update(duration: Unit, `lazy`: js.Any): js.Object = js.native
   }
   
   @js.native
   trait ChartData extends StObject {
     
-    var labels: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
+    var labels: scala.Unit | (js.Array[String | js.Array[String]]) = js.native
   }
   object ChartData {
     
@@ -97,7 +96,7 @@ object mod {
       def setLabels(value: js.Array[String | js.Array[String]]): Self = StObject.set(x, "labels", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setLabelsUndefined: Self = StObject.set(x, "labels", js.undefined)
+      def setLabelsUndefined: Self = StObject.set(x, "labels", ())
       
       @scala.inline
       def setLabelsVarargs(value: (String | js.Array[String])*): Self = StObject.set(x, "labels", js.Array(value :_*))
@@ -129,9 +128,9 @@ object mod {
   trait ChartOptions extends StObject {
     
     // Plugins can require any options
-    var plugins: js.UndefOr[StringDictionary[js.Any]] = js.native
+    var plugins: scala.Unit | StringDictionary[js.Any] = js.native
     
-    var responsive: js.UndefOr[Boolean] = js.native
+    var responsive: scala.Unit | Boolean = js.native
   }
   object ChartOptions {
     
@@ -148,13 +147,13 @@ object mod {
       def setPlugins(value: StringDictionary[js.Any]): Self = StObject.set(x, "plugins", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPluginsUndefined: Self = StObject.set(x, "plugins", js.undefined)
+      def setPluginsUndefined: Self = StObject.set(x, "plugins", ())
       
       @scala.inline
       def setResponsive(value: Boolean): Self = StObject.set(x, "responsive", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setResponsiveUndefined: Self = StObject.set(x, "responsive", js.undefined)
+      def setResponsiveUndefined: Self = StObject.set(x, "responsive", ())
     }
   }
 }

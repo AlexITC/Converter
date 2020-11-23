@@ -2,7 +2,6 @@ package typings.expressServeStaticCore
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -70,7 +69,7 @@ object mod {
   
   type Handler = RequestHandler
   
-  type NextFunction = js.Function1[/* err */ js.UndefOr[js.Any], Unit]
+  type NextFunction = js.Function1[/* err */ scala.Unit | js.Any, Unit]
   
   type RequestHandler = js.Function3[/* req */ Request, /* res */ Response, /* next */ NextFunction, js.Any]
 }

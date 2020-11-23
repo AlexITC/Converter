@@ -3,7 +3,6 @@ package typingsSlinky.stardustUiReactComponentEventListener
 import slinky.core.facade.ReactRef
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object typesMod {
@@ -12,7 +11,7 @@ object typesMod {
   trait EventListenerOptions[T /* <: EventTypes */] extends StObject {
     
     /** Indicating that events of this type will be dispatched to the registered listener before being dispatched to any EventTarget beneath it in the DOM tree. */
-    var capture: js.UndefOr[Boolean] = js.native
+    var capture: scala.Unit | Boolean = js.native
     
     /** A function which receives a notification when an event of the specified type occurs. */
     var listener: EventHandler[T] = js.native
@@ -41,13 +40,13 @@ object typesMod {
     }
     
     @scala.inline
-    implicit class EventListenerOptionsMutableBuilder[Self <: EventListenerOptions[_], T /* <: EventTypes */] (val x: Self with EventListenerOptions[T]) extends AnyVal {
+    implicit class EventListenerOptionsMutableBuilder[Self <: EventListenerOptions[?], T /* <: EventTypes */] (val x: Self & EventListenerOptions[T]) extends AnyVal {
       
       @scala.inline
       def setCapture(value: Boolean): Self = StObject.set(x, "capture", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCaptureUndefined: Self = StObject.set(x, "capture", js.undefined)
+      def setCaptureUndefined: Self = StObject.set(x, "capture", ())
       
       @scala.inline
       def setListener(

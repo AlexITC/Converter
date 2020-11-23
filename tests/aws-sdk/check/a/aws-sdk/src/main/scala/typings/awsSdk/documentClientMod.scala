@@ -6,7 +6,6 @@ import typings.awsSdk.dynamodbMod.ClientConfiguration
 import typings.awsSdk.dynamodbMod.^
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object documentClientMod {
@@ -17,7 +16,7 @@ object documentClientMod {
     * Creates a DynamoDB document client with a set of configuration options.
     */
   class DocumentClient () extends StObject {
-    def this(options: DocumentClientOptions with ClientConfiguration) = this()
+    def this(options: DocumentClientOptions & ClientConfiguration) = this()
   }
   object DocumentClient {
     
@@ -28,14 +27,14 @@ object documentClientMod {
         * An optional flag indicating that the document client should cast
         * empty strings, buffers, and sets to NULL shapes
         */
-      var convertEmptyValues: js.UndefOr[Boolean] = js.native
+      var convertEmptyValues: scala.Unit | Boolean = js.native
       
       /**
         * Whether to return numbers as a NumberValue object instead of
         * converting them to native JavaScript numbers. This allows for the
         * safe round-trip transport of numbers of arbitrary size.
         */
-      var wrapNumbers: js.UndefOr[Boolean] = js.native
+      var wrapNumbers: scala.Unit | Boolean = js.native
     }
     object ConverterOptions {
       
@@ -52,13 +51,13 @@ object documentClientMod {
         def setConvertEmptyValues(value: Boolean): Self = StObject.set(x, "convertEmptyValues", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setConvertEmptyValuesUndefined: Self = StObject.set(x, "convertEmptyValues", js.undefined)
+        def setConvertEmptyValuesUndefined: Self = StObject.set(x, "convertEmptyValues", ())
         
         @scala.inline
         def setWrapNumbers(value: Boolean): Self = StObject.set(x, "wrapNumbers", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setWrapNumbersUndefined: Self = StObject.set(x, "wrapNumbers", js.undefined)
+        def setWrapNumbersUndefined: Self = StObject.set(x, "wrapNumbers", ())
       }
     }
     
@@ -68,12 +67,12 @@ object documentClientMod {
       /**
         * An optional map of parameters to bind to every request sent by this service object.
         */
-      var params: js.UndefOr[StringDictionary[js.Any]] = js.native
+      var params: scala.Unit | StringDictionary[js.Any] = js.native
       
       /**
         * An optional pre-configured instance of the AWS.DynamoDB service object to use for requests. The object may bound parameters used by the document client.
         */
-      var service: js.UndefOr[^] = js.native
+      var service: scala.Unit | ^ = js.native
     }
     object DocumentClientOptions {
       
@@ -90,13 +89,13 @@ object documentClientMod {
         def setParams(value: StringDictionary[js.Any]): Self = StObject.set(x, "params", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setParamsUndefined: Self = StObject.set(x, "params", js.undefined)
+        def setParamsUndefined: Self = StObject.set(x, "params", ())
         
         @scala.inline
         def setService(value: ^): Self = StObject.set(x, "service", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setServiceUndefined: Self = StObject.set(x, "service", js.undefined)
+        def setServiceUndefined: Self = StObject.set(x, "service", ())
       }
     }
     

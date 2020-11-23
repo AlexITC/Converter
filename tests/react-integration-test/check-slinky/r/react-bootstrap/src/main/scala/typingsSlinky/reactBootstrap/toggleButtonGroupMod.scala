@@ -12,7 +12,6 @@ import typingsSlinky.reactBootstrap.reactBootstrapStrings.radio
 import typingsSlinky.reactBootstrap.reactBootstrapStrings.value
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object toggleButtonGroupMod {
@@ -29,13 +28,13 @@ object toggleButtonGroupMod {
       * You'll usually want to use string|number|string[]|number[] here,
       * but you can technically use any|any[].
       */
-    var defaultValue: js.UndefOr[js.Any] = js.native
+    var defaultValue: scala.Unit | js.Any = js.native
     
     /**
       * You'll usually want to use string|number|string[]|number[] here,
       * but you can technically use any|any[].
       */
-    var value: js.UndefOr[js.Any] = js.native
+    var value: scala.Unit | js.Any = js.native
   }
   object BaseProps {
     
@@ -52,22 +51,22 @@ object toggleButtonGroupMod {
       def setDefaultValue(value: js.Any): Self = StObject.set(x, "defaultValue", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDefaultValueUndefined: Self = StObject.set(x, "defaultValue", js.undefined)
+      def setDefaultValueUndefined: Self = StObject.set(x, "defaultValue", ())
       
       @scala.inline
       def setValue(value: js.Any): Self = StObject.set(x, "value", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setValueUndefined: Self = StObject.set(x, "value", js.undefined)
+      def setValueUndefined: Self = StObject.set(x, "value", ())
     }
   }
   
   @js.native
   trait CheckboxProps extends StObject {
     
-    var name: js.UndefOr[String] = js.native
+    var name: scala.Unit | String = js.native
     
-    var onChange: js.UndefOr[js.Function1[/* values */ js.Array[_], Unit]] = js.native
+    var onChange: scala.Unit | (js.Function1[/* values */ js.Array[?], Unit]) = js.native
     
     var `type`: checkbox = js.native
   }
@@ -87,13 +86,13 @@ object toggleButtonGroupMod {
       def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
+      def setNameUndefined: Self = StObject.set(x, "name", ())
       
       @scala.inline
-      def setOnChange(value: /* values */ js.Array[_] => Unit): Self = StObject.set(x, "onChange", js.Any.fromFunction1(value))
+      def setOnChange(value: /* values */ js.Array[?] => Unit): Self = StObject.set(x, "onChange", js.Any.fromFunction1(value))
       
       @scala.inline
-      def setOnChangeUndefined: Self = StObject.set(x, "onChange", js.undefined)
+      def setOnChangeUndefined: Self = StObject.set(x, "onChange", ())
       
       @scala.inline
       def setType(value: checkbox): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
@@ -106,7 +105,7 @@ object toggleButtonGroupMod {
     /** Required if `type` is set to "radio" */
     var name: String = js.native
     
-    var onChange: js.UndefOr[js.Function1[/* value */ js.Any, Unit]] = js.native
+    var onChange: scala.Unit | (js.Function1[/* value */ js.Any, Unit]) = js.native
     
     var `type`: radio = js.native
   }
@@ -129,7 +128,7 @@ object toggleButtonGroupMod {
       def setOnChange(value: /* value */ js.Any => Unit): Self = StObject.set(x, "onChange", js.Any.fromFunction1(value))
       
       @scala.inline
-      def setOnChangeUndefined: Self = StObject.set(x, "onChange", js.undefined)
+      def setOnChangeUndefined: Self = StObject.set(x, "onChange", ())
       
       @scala.inline
       def setType(value: radio): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])
@@ -140,5 +139,5 @@ object toggleButtonGroupMod {
   trait ToggleButtonGroup
     extends Component[ToggleButtonGroupProps, js.Object, js.Any]
   
-  type ToggleButtonGroupProps = BaseProps with (RadioProps | CheckboxProps) with (Omit[ButtonGroupProps, onChange]) with (Omit[HTMLProps[ToggleButtonGroup], defaultValue | `type` | value | onChange])
+  type ToggleButtonGroupProps = BaseProps & (RadioProps | CheckboxProps) & (Omit[ButtonGroupProps, onChange]) & (Omit[HTMLProps[ToggleButtonGroup], defaultValue | `type` | value | onChange])
 }

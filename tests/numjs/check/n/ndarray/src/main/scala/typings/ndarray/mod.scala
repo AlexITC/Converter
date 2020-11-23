@@ -2,7 +2,6 @@ package typings.ndarray
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -12,25 +11,25 @@ object mod {
   def apply[T](data: Data[T]): typings.ndarray.mod.ndarray[T] = js.native
   @JSImport("ndarray", JSImport.Namespace)
   @js.native
-  def apply[T](data: Data[T], shape: js.UndefOr[scala.Nothing], stride: js.UndefOr[scala.Nothing], offset: Double): typings.ndarray.mod.ndarray[T] = js.native
-  @JSImport("ndarray", JSImport.Namespace)
-  @js.native
-  def apply[T](data: Data[T], shape: js.UndefOr[scala.Nothing], stride: js.Array[Double]): typings.ndarray.mod.ndarray[T] = js.native
-  @JSImport("ndarray", JSImport.Namespace)
-  @js.native
-  def apply[T](data: Data[T], shape: js.UndefOr[scala.Nothing], stride: js.Array[Double], offset: Double): typings.ndarray.mod.ndarray[T] = js.native
-  @JSImport("ndarray", JSImport.Namespace)
-  @js.native
   def apply[T](data: Data[T], shape: js.Array[Double]): typings.ndarray.mod.ndarray[T] = js.native
-  @JSImport("ndarray", JSImport.Namespace)
-  @js.native
-  def apply[T](data: Data[T], shape: js.Array[Double], stride: js.UndefOr[scala.Nothing], offset: Double): typings.ndarray.mod.ndarray[T] = js.native
   @JSImport("ndarray", JSImport.Namespace)
   @js.native
   def apply[T](data: Data[T], shape: js.Array[Double], stride: js.Array[Double]): typings.ndarray.mod.ndarray[T] = js.native
   @JSImport("ndarray", JSImport.Namespace)
   @js.native
   def apply[T](data: Data[T], shape: js.Array[Double], stride: js.Array[Double], offset: Double): typings.ndarray.mod.ndarray[T] = js.native
+  @JSImport("ndarray", JSImport.Namespace)
+  @js.native
+  def apply[T](data: Data[T], shape: js.Array[Double], stride: Unit, offset: Double): typings.ndarray.mod.ndarray[T] = js.native
+  @JSImport("ndarray", JSImport.Namespace)
+  @js.native
+  def apply[T](data: Data[T], shape: Unit, stride: js.Array[Double]): typings.ndarray.mod.ndarray[T] = js.native
+  @JSImport("ndarray", JSImport.Namespace)
+  @js.native
+  def apply[T](data: Data[T], shape: Unit, stride: js.Array[Double], offset: Double): typings.ndarray.mod.ndarray[T] = js.native
+  @JSImport("ndarray", JSImport.Namespace)
+  @js.native
+  def apply[T](data: Data[T], shape: Unit, stride: Unit, offset: Double): typings.ndarray.mod.ndarray[T] = js.native
   
   @js.native
   trait ndarray[T] extends StObject {
@@ -48,7 +47,7 @@ object mod {
     }
     
     @scala.inline
-    implicit class ndarrayMutableBuilder[Self <: typings.ndarray.mod.ndarray[_], T] (val x: Self with typings.ndarray.mod.ndarray[T]) extends AnyVal {
+    implicit class ndarrayMutableBuilder[Self <: typings.ndarray.mod.ndarray[?], T] (val x: Self & typings.ndarray.mod.ndarray[T]) extends AnyVal {
       
       @scala.inline
       def setData(value: Data[T]): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])

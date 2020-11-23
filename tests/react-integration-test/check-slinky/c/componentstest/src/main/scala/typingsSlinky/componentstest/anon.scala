@@ -2,7 +2,6 @@ package typingsSlinky.componentstest
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object anon {
@@ -11,12 +10,12 @@ object anon {
   trait Equals extends StObject {
     
     @JSName("equals")
-    var equals_FEquals: js.UndefOr[Boolean] = js.native
+    var equals_FEquals: scala.Unit | Boolean = js.native
     
     def finalize(other: js.Object): Boolean = js.native
     
     @JSName("ne")
-    var ne_FEquals: js.UndefOr[js.Function1[/* other */ js.Object, Boolean]] = js.native
+    var ne_FEquals: scala.Unit | (js.Function1[/* other */ js.Object, Boolean]) = js.native
   }
   object Equals {
     
@@ -34,7 +33,7 @@ object anon {
       def setEquals_(value: Boolean): Self = StObject.set(x, "equals", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setEquals_Undefined: Self = StObject.set(x, "equals", js.undefined)
+      def setEquals_Undefined: Self = StObject.set(x, "equals", ())
       
       @scala.inline
       def setFinalize_(value: js.Object => Boolean): Self = StObject.set(x, "finalize", js.Any.fromFunction1(value))
@@ -43,7 +42,7 @@ object anon {
       def setNe_(value: /* other */ js.Object => Boolean): Self = StObject.set(x, "ne", js.Any.fromFunction1(value))
       
       @scala.inline
-      def setNe_Undefined: Self = StObject.set(x, "ne", js.undefined)
+      def setNe_Undefined: Self = StObject.set(x, "ne", ())
     }
   }
 }

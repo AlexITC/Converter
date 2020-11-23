@@ -5,14 +5,13 @@ import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object address {
   
   val component: String = "address"
   
-  implicit def make(companion: address.type): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement with js.Object] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: address.type): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement & js.Object] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement & js.Object](js.Array(this.component, js.Dictionary.empty))()
   
-  def withProps(p: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement with js.Object] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement]): SharedBuilder_DetailedHTMLProps1276931637[HTMLElement & js.Object] = new SharedBuilder_DetailedHTMLProps1276931637[HTMLElement & js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

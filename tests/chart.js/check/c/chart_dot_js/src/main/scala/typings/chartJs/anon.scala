@@ -10,7 +10,6 @@ import typings.std.CanvasRenderingContext2D
 import typings.std.HTMLCanvasElement
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object anon {
@@ -19,12 +18,12 @@ object anon {
   trait Dictkey
     extends /* key */ StringDictionary[js.Any] {
     
-    var global: ChartOptions with ChartFontOptions = js.native
+    var global: ChartOptions & ChartFontOptions = js.native
   }
   object Dictkey {
     
     @scala.inline
-    def apply(global: ChartOptions with ChartFontOptions): Dictkey = {
+    def apply(global: ChartOptions & ChartFontOptions): Dictkey = {
       val __obj = js.Dynamic.literal(global = global.asInstanceOf[js.Any])
       __obj.asInstanceOf[Dictkey]
     }
@@ -33,7 +32,7 @@ object anon {
     implicit class DictkeyMutableBuilder[Self <: Dictkey] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setGlobal(value: ChartOptions with ChartFontOptions): Self = StObject.set(x, "global", value.asInstanceOf[js.Any])
+      def setGlobal(value: ChartOptions & ChartFontOptions): Self = StObject.set(x, "global", value.asInstanceOf[js.Any])
     }
   }
   

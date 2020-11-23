@@ -55,7 +55,6 @@ object Printer {
   val Imports: String =
     """|import org.scalablytyped.runtime.StObject
        |import scala.scalajs.js
-       |import scala.scalajs.js.`|`
        |import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}""".stripMargin
 
   private final case class Indenter(a: Appendable) {
@@ -444,17 +443,14 @@ object Printer {
             s"$params => ${formatTypeRef(indent)(retType)}"
 
           case TypeRef.ThisType(_)           => "this.type"
-          case TypeRef.Wildcard              => "_"
+          case TypeRef.Wildcard              => "?"
           case TypeRef.Singleton(underlying) => formatTypeRef(indent)(underlying) |+| ".type"
 
           case TypeRef.Intersection(types, _) =>
-            types.map(formatTypeRef(indent)).map(paramsIfNeeded).mkString(" with ")
-
-          case TypeRef.UndefOr(tpe, _) =>
-            formatTypeRef(indent)(TypeRef(QualifiedName.UndefOr, IArray(tpe), NoComments))
+            types.map(formatTypeRef(indent)).map(paramsIfNeeded).mkString(" & ")
 
           case TypeRef.undefined => // keep this line after TypeRef.UndefOr. This line covers if it appears outside a union type
-            formatTypeRef(indent)(TypeRef(QualifiedName.UndefOr, IArray(TypeRef.Nothing), NoComments))
+            formatTypeRef(indent)(TypeRef.Unit)
 
           case TypeRef.Union(types, _) =>
             types.map(formatTypeRef(indent)).map(paramsIfNeeded).mkString(" | ")
@@ -543,8 +539,6 @@ object Printer {
           s"if (${formatExpr(indent)(pred)}) ${formatExpr(indent)(ifTrue)}"
         case ExprTree.Block(es) =>
           es.map(e => "  " + formatExpr(indent)(e)).mkString("{\n", "\n", "\n}")
-        case ExprTree.Null =>
-          "null"
         case ExprTree.`:_*`(e) =>
           s"${formatExpr(indent)(e)} :_*"
         case ExprTree.Ref(value) =>
@@ -555,6 +549,10 @@ object Printer {
           value
         case ExprTree.BooleanLit(value) =>
           value.toString
+        case ExprTree.undefined =>
+          "()"
+        case ExprTree.Null =>
+          "null"
         case ExprTree.Unary(op, expr) =>
           s"$op${formatExpr(indent)(expr)}"
         case ExprTree.BinaryOp(one, op, two) =>

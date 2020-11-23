@@ -10,13 +10,14 @@ case class NormalFlavour(
     shouldUseScalaJsDomTypes: Boolean,
     enableLongApplyMethod:    Boolean,
     outputPkg:                Name,
+    versions:                 Versions,
 ) extends FlavourImplReact {
 
   override val enableReactTreeShaking: Selection[Name] =
     Selection.None
 
   override val dependencies: Set[Dep] =
-    if (shouldUseScalaJsDomTypes) Set(Versions.scalaJsDom, Versions.runtime) else Set(Versions.runtime)
+    if (shouldUseScalaJsDomTypes) Set(versions.scalaJsDom, versions.runtime) else Set(versions.runtime)
 
   override val rewritesOpt: Option[TypeRewriterCast] =
     if (shouldUseScalaJsDomTypes) Some(new TypeRewriterCast(scalaJsDomNames.All)) else None

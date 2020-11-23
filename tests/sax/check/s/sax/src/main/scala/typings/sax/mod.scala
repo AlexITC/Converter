@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typings.node.streamMod.Duplex
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -153,17 +152,17 @@ object mod {
   @js.native
   trait SAXOptions extends StObject {
     
-    var lowercase: js.UndefOr[Boolean] = js.native
+    var lowercase: scala.Unit | Boolean = js.native
     
-    var normalize: js.UndefOr[Boolean] = js.native
+    var normalize: scala.Unit | Boolean = js.native
     
-    var noscript: js.UndefOr[Boolean] = js.native
+    var noscript: scala.Unit | Boolean = js.native
     
-    var position: js.UndefOr[Boolean] = js.native
+    var position: scala.Unit | Boolean = js.native
     
-    var trim: js.UndefOr[Boolean] = js.native
+    var trim: scala.Unit | Boolean = js.native
     
-    var xmlns: js.UndefOr[Boolean] = js.native
+    var xmlns: scala.Unit | Boolean = js.native
   }
   object SAXOptions {
     
@@ -180,37 +179,37 @@ object mod {
       def setLowercase(value: Boolean): Self = StObject.set(x, "lowercase", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setLowercaseUndefined: Self = StObject.set(x, "lowercase", js.undefined)
+      def setLowercaseUndefined: Self = StObject.set(x, "lowercase", ())
       
       @scala.inline
       def setNormalize(value: Boolean): Self = StObject.set(x, "normalize", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setNormalizeUndefined: Self = StObject.set(x, "normalize", js.undefined)
+      def setNormalizeUndefined: Self = StObject.set(x, "normalize", ())
       
       @scala.inline
       def setNoscript(value: Boolean): Self = StObject.set(x, "noscript", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setNoscriptUndefined: Self = StObject.set(x, "noscript", js.undefined)
+      def setNoscriptUndefined: Self = StObject.set(x, "noscript", ())
       
       @scala.inline
       def setPosition(value: Boolean): Self = StObject.set(x, "position", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPositionUndefined: Self = StObject.set(x, "position", js.undefined)
+      def setPositionUndefined: Self = StObject.set(x, "position", ())
       
       @scala.inline
       def setTrim(value: Boolean): Self = StObject.set(x, "trim", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setTrimUndefined: Self = StObject.set(x, "trim", js.undefined)
+      def setTrimUndefined: Self = StObject.set(x, "trim", ())
       
       @scala.inline
       def setXmlns(value: Boolean): Self = StObject.set(x, "xmlns", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setXmlnsUndefined: Self = StObject.set(x, "xmlns", js.undefined)
+      def setXmlnsUndefined: Self = StObject.set(x, "xmlns", ())
     }
   }
   

@@ -12,7 +12,6 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object accordionTitleMod {
@@ -38,29 +37,27 @@ object accordionTitleMod {
   trait StrictAccordionTitleProps extends StObject {
     
     /** Whether or not the title is in the open state. */
-    var active: js.UndefOr[Boolean] = js.native
+    var active: scala.Unit | Boolean = js.native
     
     /** An element type to render as (string or function). */
-    var as: js.UndefOr[js.Any] = js.native
+    var as: scala.Unit | js.Any = js.native
     
     /** Primary content. */
-    var children: js.UndefOr[ReactElement] = js.native
+    var children: scala.Unit | ReactElement = js.native
     
     /** Additional classes. */
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
     /** Shorthand for primary content. */
-    var content: js.UndefOr[SemanticShorthandContent] = js.native
+    var content: scala.Unit | SemanticShorthandContent = js.native
     
     /** Shorthand for Icon. */
-    var icon: js.UndefOr[
-        SemanticShorthandItem[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ _
-        ]
-      ] = js.native
+    var icon: scala.Unit | (SemanticShorthandItem[
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ js.Any
+      ]) = js.native
     
     /** AccordionTitle index inside Accordion. */
-    var index: js.UndefOr[Double | String] = js.native
+    var index: scala.Unit | Double | String = js.native
     
     /**
       * Called on click.
@@ -68,13 +65,11 @@ object accordionTitleMod {
       * @param {SyntheticEvent} event - React's original SyntheticEvent.
       * @param {object} data - All props.
       */
-    var onClick: js.UndefOr[
-        js.Function2[
-          /* event */ SyntheticMouseEvent[HTMLDivElement], 
-          /* data */ AccordionTitleProps, 
-          Unit
-        ]
-      ] = js.native
+    var onClick: scala.Unit | (js.Function2[
+        /* event */ SyntheticMouseEvent[HTMLDivElement], 
+        /* data */ AccordionTitleProps, 
+        Unit
+      ]) = js.native
   }
   object StrictAccordionTitleProps {
     
@@ -91,13 +86,13 @@ object accordionTitleMod {
       def setActive(value: Boolean): Self = StObject.set(x, "active", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setActiveUndefined: Self = StObject.set(x, "active", js.undefined)
+      def setActiveUndefined: Self = StObject.set(x, "active", ())
       
       @scala.inline
       def setAs(value: js.Any): Self = StObject.set(x, "as", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAsUndefined: Self = StObject.set(x, "as", js.undefined)
+      def setAsUndefined: Self = StObject.set(x, "as", ())
       
       @scala.inline
       def setChildren(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
@@ -106,13 +101,13 @@ object accordionTitleMod {
       def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+      def setChildrenUndefined: Self = StObject.set(x, "children", ())
       
       @scala.inline
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setContent(value: SemanticShorthandContent): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
@@ -121,39 +116,39 @@ object accordionTitleMod {
       def setContentReactElement(value: ReactElement): Self = StObject.set(x, "content", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setContentUndefined: Self = StObject.set(x, "content", js.undefined)
+      def setContentUndefined: Self = StObject.set(x, "content", ())
       
       @scala.inline
       def setIcon(
         value: SemanticShorthandItem[
-              /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ _
+              /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ js.Any
             ]
       ): Self = StObject.set(x, "icon", value.asInstanceOf[js.Any])
       
       @scala.inline
       def setIconFunction3(
         value: (/* component */ ReactType[
-              /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ _
-            ], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ _, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+              /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ js.Any
+            ], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconProps */ js.Any, /* children */ scala.Unit | ReactElement | ReactNodeArray) => ReactElement | Null
       ): Self = StObject.set(x, "icon", js.Any.fromFunction3(value))
       
       @scala.inline
       def setIconReactElement(value: ReactElement): Self = StObject.set(x, "icon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setIconUndefined: Self = StObject.set(x, "icon", js.undefined)
+      def setIconUndefined: Self = StObject.set(x, "icon", ())
       
       @scala.inline
       def setIndex(value: Double | String): Self = StObject.set(x, "index", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setIndexUndefined: Self = StObject.set(x, "index", js.undefined)
+      def setIndexUndefined: Self = StObject.set(x, "index", ())
       
       @scala.inline
       def setOnClick(value: (/* event */ SyntheticMouseEvent[HTMLDivElement], /* data */ AccordionTitleProps) => Unit): Self = StObject.set(x, "onClick", js.Any.fromFunction2(value))
       
       @scala.inline
-      def setOnClickUndefined: Self = StObject.set(x, "onClick", js.undefined)
+      def setOnClickUndefined: Self = StObject.set(x, "onClick", ())
     }
   }
   

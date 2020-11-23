@@ -2,7 +2,6 @@ package typings.elasticsearchJs
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -22,7 +21,7 @@ object mod {
     }
     
     @scala.inline
-    implicit class TransportRequestPromiseMutableBuilder[Self <: TransportRequestPromise[_], T] (val x: Self with TransportRequestPromise[T]) extends AnyVal {
+    implicit class TransportRequestPromiseMutableBuilder[Self <: TransportRequestPromise[?], T] (val x: Self & TransportRequestPromise[T]) extends AnyVal {
       
       @scala.inline
       def setAbort(value: () => Unit): Self = StObject.set(x, "abort", js.Any.fromFunction0(value))

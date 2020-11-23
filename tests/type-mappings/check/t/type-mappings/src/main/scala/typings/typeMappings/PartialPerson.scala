@@ -2,16 +2,15 @@ package typings.typeMappings
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Partial<type-mappings.Person> */
 @js.native
 trait PartialPerson extends StObject {
   
-  var age: js.UndefOr[scala.Double | Null] = js.native
+  var age: scala.Unit | scala.Double | Null = js.native
   
-  var name: js.UndefOr[String] = js.native
+  var name: scala.Unit | String = js.native
 }
 object PartialPerson {
   
@@ -31,12 +30,12 @@ object PartialPerson {
     def setAgeNull: Self = StObject.set(x, "age", null)
     
     @scala.inline
-    def setAgeUndefined: Self = StObject.set(x, "age", js.undefined)
+    def setAgeUndefined: Self = StObject.set(x, "age", ())
     
     @scala.inline
     def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
+    def setNameUndefined: Self = StObject.set(x, "name", ())
   }
 }

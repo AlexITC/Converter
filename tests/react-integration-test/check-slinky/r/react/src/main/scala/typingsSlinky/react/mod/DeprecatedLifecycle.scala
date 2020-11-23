@@ -2,7 +2,6 @@ package typingsSlinky.react.mod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -21,7 +20,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var UNSAFE_componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
+  var UNSAFE_componentWillMount: scala.Unit | js.Function0[Unit] = js.native
   
   /**
     * Called when the component may be receiving new props.
@@ -39,7 +38,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var UNSAFE_componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.native
+  var UNSAFE_componentWillReceiveProps: scala.Unit | (js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]) = js.native
   
   /**
     * Called immediately before rendering when new props or state is received. Not called for the initial render.
@@ -55,9 +54,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#reading-dom-properties-before-an-update
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var UNSAFE_componentWillUpdate: js.UndefOr[
-    js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]
-  ] = js.native
+  var UNSAFE_componentWillUpdate: scala.Unit | (js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]) = js.native
   
   /**
     * Called immediately before mounting occurs, and before `Component#render`.
@@ -70,7 +67,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#initializing-state
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var componentWillMount: js.UndefOr[js.Function0[Unit]] = js.native
+  var componentWillMount: scala.Unit | js.Function0[Unit] = js.native
   
   /**
     * Called when the component may be receiving new props.
@@ -86,7 +83,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#updating-state-based-on-props
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var componentWillReceiveProps: js.UndefOr[js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]] = js.native
+  var componentWillReceiveProps: scala.Unit | (js.Function2[/* nextProps */ P, /* nextContext */ js.Any, Unit]) = js.native
   
   /**
     * Called immediately before rendering when new props or state is received. Not called for the initial render.
@@ -100,9 +97,7 @@ trait DeprecatedLifecycle[P, S] extends StObject {
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#reading-dom-properties-before-an-update
     * @see https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#gradual-migration-path
     */
-  var componentWillUpdate: js.UndefOr[
-    js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]
-  ] = js.native
+  var componentWillUpdate: scala.Unit | (js.Function3[/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any, Unit]) = js.native
 }
 object DeprecatedLifecycle {
   
@@ -113,42 +108,42 @@ object DeprecatedLifecycle {
   }
   
   @scala.inline
-  implicit class DeprecatedLifecycleMutableBuilder[Self <: DeprecatedLifecycle[_, _], P, S] (val x: Self with (DeprecatedLifecycle[P, S])) extends AnyVal {
+  implicit class DeprecatedLifecycleMutableBuilder[Self <: DeprecatedLifecycle[?, ?], P, S] (val x: Self & (DeprecatedLifecycle[P, S])) extends AnyVal {
     
     @scala.inline
     def setComponentWillMount(value: () => Unit): Self = StObject.set(x, "componentWillMount", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setComponentWillMountUndefined: Self = StObject.set(x, "componentWillMount", js.undefined)
+    def setComponentWillMountUndefined: Self = StObject.set(x, "componentWillMount", ())
     
     @scala.inline
     def setComponentWillReceiveProps(value: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): Self = StObject.set(x, "componentWillReceiveProps", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setComponentWillReceivePropsUndefined: Self = StObject.set(x, "componentWillReceiveProps", js.undefined)
+    def setComponentWillReceivePropsUndefined: Self = StObject.set(x, "componentWillReceiveProps", ())
     
     @scala.inline
     def setComponentWillUpdate(value: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit): Self = StObject.set(x, "componentWillUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setComponentWillUpdateUndefined: Self = StObject.set(x, "componentWillUpdate", js.undefined)
+    def setComponentWillUpdateUndefined: Self = StObject.set(x, "componentWillUpdate", ())
     
     @scala.inline
     def setUNSAFE_componentWillMount(value: () => Unit): Self = StObject.set(x, "UNSAFE_componentWillMount", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setUNSAFE_componentWillMountUndefined: Self = StObject.set(x, "UNSAFE_componentWillMount", js.undefined)
+    def setUNSAFE_componentWillMountUndefined: Self = StObject.set(x, "UNSAFE_componentWillMount", ())
     
     @scala.inline
     def setUNSAFE_componentWillReceiveProps(value: (/* nextProps */ P, /* nextContext */ js.Any) => Unit): Self = StObject.set(x, "UNSAFE_componentWillReceiveProps", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setUNSAFE_componentWillReceivePropsUndefined: Self = StObject.set(x, "UNSAFE_componentWillReceiveProps", js.undefined)
+    def setUNSAFE_componentWillReceivePropsUndefined: Self = StObject.set(x, "UNSAFE_componentWillReceiveProps", ())
     
     @scala.inline
     def setUNSAFE_componentWillUpdate(value: (/* nextProps */ P, /* nextState */ S, /* nextContext */ js.Any) => Unit): Self = StObject.set(x, "UNSAFE_componentWillUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setUNSAFE_componentWillUpdateUndefined: Self = StObject.set(x, "UNSAFE_componentWillUpdate", js.undefined)
+    def setUNSAFE_componentWillUpdateUndefined: Self = StObject.set(x, "UNSAFE_componentWillUpdate", ())
   }
 }

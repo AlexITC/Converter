@@ -4,7 +4,6 @@ import typings.rxjs.typesMod.OperatorFunction
 import typings.rxjs.typesMod.Subscribable
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object observableMod {
@@ -23,6 +22,6 @@ object observableMod {
     def pipe(): Observable[T] = js.native
     
     /** @deprecated This is an internal implementation detail, do not use. */
-    var source: Observable[_] = js.native
+    var source: Observable[?] = js.native
   }
 }

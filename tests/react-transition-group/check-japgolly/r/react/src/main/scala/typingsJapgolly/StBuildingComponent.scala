@@ -11,7 +11,6 @@ import japgolly.scalajs.react.vdom.VdomNode
 import typingsJapgolly.StBuildingComponent.make
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 trait StBuildingComponent[R <: js.Object] extends Any {
@@ -74,7 +73,7 @@ trait StBuildingComponent[R <: js.Object] extends Any {
 object StBuildingComponent {
   
   @scala.inline
-  implicit def make(comp: StBuildingComponent[_]): VdomElement = {
+  implicit def make(comp: StBuildingComponent[?]): VdomElement = {
     if (!scala.scalajs.runtime.linkingInfo.productionMode) {
     if (comp.args(0) == null) throw new IllegalStateException("This component has already been built into a ReactElement, and cannot be reused")
   }

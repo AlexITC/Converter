@@ -56,7 +56,7 @@ object defaultInterpretation {
               val updater = Mutator { ref =>
                 If(
                   pred    = Unary("!", Call(Ref(QualifiedName.isUndefined), IArray(IArray(Ref(prop.name))))),
-                  ifTrue  = updateObj(asExpr(Select(Ref(prop.name), Name("get")))).value(ref),
+                  ifTrue  = updateObj(asExpr(Ref(prop.name))).value(ref),
                   ifFalse = None,
                 )
               }

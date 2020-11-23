@@ -2,7 +2,6 @@ package typings.typeMappings
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object anon {
@@ -31,7 +30,7 @@ object anon {
   @js.native
   trait Get extends StObject {
     
-    def get(): js.UndefOr[scala.Double | Null] = js.native
+    def get(): scala.Unit | scala.Double | Null = js.native
     
     def set(): Unit = js.native
     def set(v: scala.Double): Unit = js.native

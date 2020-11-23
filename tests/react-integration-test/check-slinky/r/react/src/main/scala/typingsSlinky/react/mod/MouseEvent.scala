@@ -4,11 +4,10 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticMouseEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MouseEvent[T, E] extends BaseSyntheticEvent[E, EventTarget with T, EventTarget] {
+trait MouseEvent[T, E] extends BaseSyntheticEvent[E, EventTarget & T, EventTarget] {
   
   var altKey: Boolean = js.native
   
@@ -57,7 +56,7 @@ object MouseEvent {
     clientX: Double,
     clientY: Double,
     ctrlKey: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     getModifierState: String => Boolean,
@@ -87,7 +86,7 @@ object MouseEvent {
   }
   
   @scala.inline
-  implicit class MouseEventMutableBuilder[Self <: SyntheticMouseEvent[_], T, E] (val x: Self with SyntheticMouseEvent[T]) extends AnyVal {
+  implicit class MouseEventMutableBuilder[Self <: SyntheticMouseEvent[?], T, E] (val x: Self & SyntheticMouseEvent[T]) extends AnyVal {
     
     @scala.inline
     def setAltKey(value: Boolean): Self = StObject.set(x, "altKey", value.asInstanceOf[js.Any])

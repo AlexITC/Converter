@@ -1,13 +1,13 @@
 organization := "org.scalablytyped"
 name := "type-mappings"
-version := "0.0-unknown-b3a101"
-scalaVersion := "2.13.3"
+version := "0.0-unknown-118fb5"
+scalaVersion := "3.0.0-M2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.3.0",
-  "org.scalablytyped" %%% "std" % "0.0-unknown-1ef4cf")
+  "org.scalablytyped" %%% "std" % "0.0-unknown-5256f7")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

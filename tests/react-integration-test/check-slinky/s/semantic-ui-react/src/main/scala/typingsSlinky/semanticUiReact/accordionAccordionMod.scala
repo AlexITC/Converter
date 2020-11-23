@@ -10,7 +10,6 @@ import typingsSlinky.semanticUiReact.accordionContentMod.AccordionContentProps
 import typingsSlinky.semanticUiReact.accordionTitleMod.AccordionTitleProps
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object accordionAccordionMod {
@@ -43,13 +42,13 @@ object accordionAccordionMod {
   trait StrictAccordionProps extends StrictAccordionAccordionProps {
     
     /** Format to take up the width of its container. */
-    var fluid: js.UndefOr[Boolean] = js.native
+    var fluid: scala.Unit | Boolean = js.native
     
     /** Format for dark backgrounds. */
-    var inverted: js.UndefOr[Boolean] = js.native
+    var inverted: scala.Unit | Boolean = js.native
     
     /** Adds some basic styling to accordion panels. */
-    var styled: js.UndefOr[Boolean] = js.native
+    var styled: scala.Unit | Boolean = js.native
   }
   object StrictAccordionProps {
     
@@ -66,19 +65,19 @@ object accordionAccordionMod {
       def setFluid(value: Boolean): Self = StObject.set(x, "fluid", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setFluidUndefined: Self = StObject.set(x, "fluid", js.undefined)
+      def setFluidUndefined: Self = StObject.set(x, "fluid", ())
       
       @scala.inline
       def setInverted(value: Boolean): Self = StObject.set(x, "inverted", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setInvertedUndefined: Self = StObject.set(x, "inverted", js.undefined)
+      def setInvertedUndefined: Self = StObject.set(x, "inverted", ())
       
       @scala.inline
       def setStyled(value: Boolean): Self = StObject.set(x, "styled", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setStyledUndefined: Self = StObject.set(x, "styled", js.undefined)
+      def setStyledUndefined: Self = StObject.set(x, "styled", ())
     }
   }
   

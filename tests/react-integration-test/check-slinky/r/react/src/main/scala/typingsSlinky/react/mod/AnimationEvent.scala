@@ -5,11 +5,10 @@ import org.scalajs.dom.raw.EventTarget
 import slinky.web.SyntheticAnimationEvent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait AnimationEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait AnimationEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var animationName: String = js.native
   
@@ -24,7 +23,7 @@ object AnimationEvent {
     animationName: String,
     bubbles: Boolean,
     cancelable: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     elapsedTime: Double,
     eventPhase: Double,
@@ -46,7 +45,7 @@ object AnimationEvent {
   }
   
   @scala.inline
-  implicit class AnimationEventMutableBuilder[Self <: SyntheticAnimationEvent[_], T] (val x: Self with SyntheticAnimationEvent[T]) extends AnyVal {
+  implicit class AnimationEventMutableBuilder[Self <: SyntheticAnimationEvent[?], T] (val x: Self & SyntheticAnimationEvent[T]) extends AnyVal {
     
     @scala.inline
     def setAnimationName(value: String): Self = StObject.set(x, "animationName", value.asInstanceOf[js.Any])

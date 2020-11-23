@@ -77,7 +77,6 @@ import typingsJapgolly.semanticUiReact.semanticUiReactStrings.right
 import typingsJapgolly.semanticUiReact.semanticUiReactStrings.small
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Input {
@@ -358,7 +357,7 @@ object Input {
     
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[Node | ReactNodeArray]) => Element | Null
+      value: (/* component */ ReactType[InputProps], InputProps, /* children */ scala.Unit | Node | ReactNodeArray) => Element | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -378,7 +377,7 @@ object Input {
     
     @scala.inline
     def inputFunction3(
-      value: (/* component */ ReactType[HtmlInputrops], HtmlInputrops, /* children */ js.UndefOr[Node | ReactNodeArray]) => Element | Null
+      value: (/* component */ ReactType[HtmlInputrops], HtmlInputrops, /* children */ scala.Unit | Node | ReactNodeArray) => Element | Null
     ): this.type = set("input", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -411,15 +410,15 @@ object Input {
     @scala.inline
     def label(
       value: SemanticShorthandItem[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ js.Any
         ]
     ): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def labelFunction3(
       value: (/* component */ ReactType[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ _
-        ], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ _, /* children */ js.UndefOr[Node | ReactNodeArray]) => Element | Null
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ js.Any
+        ], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify LabelProps */ js.Any, /* children */ scala.Unit | Node | ReactNodeArray) => Element | Null
     ): this.type = set("label", js.Any.fromFunction3(value))
     
     @scala.inline

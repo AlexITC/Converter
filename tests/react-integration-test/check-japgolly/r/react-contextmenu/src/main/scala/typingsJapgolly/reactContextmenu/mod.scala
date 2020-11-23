@@ -14,56 +14,55 @@ import typingsJapgolly.react.mod.ReactText
 import typingsJapgolly.react.mod.ReactType
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
   
   @JSImport("react-contextmenu", "ContextMenu")
   @js.native
-  val ContextMenu: ComponentClassP[ContextMenuProps with js.Object] = js.native
+  val ContextMenu: ComponentClassP[ContextMenuProps & js.Object] = js.native
   
   @JSImport("react-contextmenu", "ContextMenuTrigger")
   @js.native
-  val ContextMenuTrigger: ComponentClassP[ContextMenuTriggerProps with js.Object] = js.native
+  val ContextMenuTrigger: ComponentClassP[ContextMenuTriggerProps & js.Object] = js.native
   
   @JSImport("react-contextmenu", "MenuItem")
   @js.native
-  val MenuItem: ComponentClassP[MenuItemProps with js.Object] = js.native
+  val MenuItem: ComponentClassP[MenuItemProps & js.Object] = js.native
   
   @JSImport("react-contextmenu", "SubMenu")
   @js.native
-  val SubMenu: ComponentClassP[SubMenuProps with js.Object] = js.native
+  val SubMenu: ComponentClassP[SubMenuProps & js.Object] = js.native
   
   @JSImport("react-contextmenu", "connectMenu")
   @js.native
-  def connectMenu(menuId: String): js.Function1[/* menu */ js.Any, _] = js.native
+  def connectMenu(menuId: String): js.Function1[/* menu */ js.Any, ?] = js.native
   
   @JSImport("react-contextmenu", "hideMenu")
   @js.native
   def hideMenu(): Unit = js.native
   @JSImport("react-contextmenu", "hideMenu")
   @js.native
-  def hideMenu(opts: js.UndefOr[scala.Nothing], target: HTMLElement): Unit = js.native
-  @JSImport("react-contextmenu", "hideMenu")
-  @js.native
   def hideMenu(opts: js.Any): Unit = js.native
   @JSImport("react-contextmenu", "hideMenu")
   @js.native
   def hideMenu(opts: js.Any, target: HTMLElement): Unit = js.native
+  @JSImport("react-contextmenu", "hideMenu")
+  @js.native
+  def hideMenu(opts: Unit, target: HTMLElement): Unit = js.native
   
   @JSImport("react-contextmenu", "showMenu")
   @js.native
   def showMenu(): Unit = js.native
   @JSImport("react-contextmenu", "showMenu")
   @js.native
-  def showMenu(opts: js.UndefOr[scala.Nothing], target: HTMLElement): Unit = js.native
-  @JSImport("react-contextmenu", "showMenu")
-  @js.native
   def showMenu(opts: js.Any): Unit = js.native
   @JSImport("react-contextmenu", "showMenu")
   @js.native
   def showMenu(opts: js.Any, target: HTMLElement): Unit = js.native
+  @JSImport("react-contextmenu", "showMenu")
+  @js.native
+  def showMenu(opts: Unit, target: HTMLElement): Unit = js.native
   
   /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
   @JSImport("react-contextmenu", "ContextMenu")
@@ -77,28 +76,26 @@ object mod {
   @js.native
   trait ContextMenuProps extends StObject {
     
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
-    var data: js.UndefOr[js.Any] = js.native
+    var data: scala.Unit | js.Any = js.native
     
-    var hideOnLeave: js.UndefOr[Boolean] = js.native
+    var hideOnLeave: scala.Unit | Boolean = js.native
     
     var id: String = js.native
     
-    var onHide: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
+    var onHide: scala.Unit | (js.Function1[/* event */ js.Any, Unit]) = js.native
     
-    var onMouseLeave: js.UndefOr[
-        (js.Function3[
-          /* event */ ReactMouseEventFrom[HTMLElement], 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
-          /* target */ HTMLElement, 
-          Unit
-        ]) | js.Function
-      ] = js.native
+    var onMouseLeave: scala.Unit | (js.Function3[
+        /* event */ ReactMouseEventFrom[HTMLElement], 
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+        /* target */ HTMLElement, 
+        Unit
+      ]) | js.Function = js.native
     
-    var onShow: js.UndefOr[js.Function1[/* event */ js.Any, Unit]] = js.native
+    var onShow: scala.Unit | (js.Function1[/* event */ js.Any, Unit]) = js.native
     
-    var rtl: js.UndefOr[Boolean] = js.native
+    var rtl: scala.Unit | Boolean = js.native
   }
   object ContextMenuProps {
     
@@ -115,19 +112,19 @@ object mod {
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setData(value: js.Any): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
+      def setDataUndefined: Self = StObject.set(x, "data", ())
       
       @scala.inline
       def setHideOnLeave(value: Boolean): Self = StObject.set(x, "hideOnLeave", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setHideOnLeaveUndefined: Self = StObject.set(x, "hideOnLeave", js.undefined)
+      def setHideOnLeaveUndefined: Self = StObject.set(x, "hideOnLeave", ())
       
       @scala.inline
       def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
@@ -136,7 +133,7 @@ object mod {
       def setOnHide(value: /* event */ js.Any => Callback): Self = StObject.set(x, "onHide", js.Any.fromFunction1((t0: /* event */ js.Any) => value(t0).runNow()))
       
       @scala.inline
-      def setOnHideUndefined: Self = StObject.set(x, "onHide", js.undefined)
+      def setOnHideUndefined: Self = StObject.set(x, "onHide", ())
       
       @scala.inline
       def setOnMouseLeave(
@@ -154,19 +151,19 @@ object mod {
       ): Self = StObject.set(x, "onMouseLeave", js.Any.fromFunction3((t0: /* event */ ReactMouseEventFrom[HTMLElement], t1: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, t2: /* target */ HTMLElement) => (value(t0, t1, t2)).runNow()))
       
       @scala.inline
-      def setOnMouseLeaveUndefined: Self = StObject.set(x, "onMouseLeave", js.undefined)
+      def setOnMouseLeaveUndefined: Self = StObject.set(x, "onMouseLeave", ())
       
       @scala.inline
       def setOnShow(value: /* event */ js.Any => Callback): Self = StObject.set(x, "onShow", js.Any.fromFunction1((t0: /* event */ js.Any) => value(t0).runNow()))
       
       @scala.inline
-      def setOnShowUndefined: Self = StObject.set(x, "onShow", js.undefined)
+      def setOnShowUndefined: Self = StObject.set(x, "onShow", ())
       
       @scala.inline
       def setRtl(value: Boolean): Self = StObject.set(x, "rtl", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRtlUndefined: Self = StObject.set(x, "rtl", js.undefined)
+      def setRtlUndefined: Self = StObject.set(x, "rtl", ())
     }
   }
   
@@ -182,17 +179,17 @@ object mod {
   @js.native
   trait ContextMenuTriggerProps extends StObject {
     
-    var attributes: js.UndefOr[HTMLAttributes[_]] = js.native
+    var attributes: scala.Unit | HTMLAttributes[?] = js.native
     
-    var collect: js.UndefOr[js.Function1[/* data */ js.Any, _]] = js.native
+    var collect: scala.Unit | (js.Function1[/* data */ js.Any, ?]) = js.native
     
-    var disable: js.UndefOr[Boolean] = js.native
+    var disable: scala.Unit | Boolean = js.native
     
-    var holdToDisplay: js.UndefOr[Double] = js.native
+    var holdToDisplay: scala.Unit | Double = js.native
     
     var id: String = js.native
     
-    var renderTag: js.UndefOr[ReactType[_]] = js.native
+    var renderTag: scala.Unit | ReactType[js.Any] = js.native
   }
   object ContextMenuTriggerProps {
     
@@ -206,40 +203,40 @@ object mod {
     implicit class ContextMenuTriggerPropsMutableBuilder[Self <: ContextMenuTriggerProps] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setAttributes(value: HTMLAttributes[_]): Self = StObject.set(x, "attributes", value.asInstanceOf[js.Any])
+      def setAttributes(value: HTMLAttributes[?]): Self = StObject.set(x, "attributes", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAttributesUndefined: Self = StObject.set(x, "attributes", js.undefined)
+      def setAttributesUndefined: Self = StObject.set(x, "attributes", ())
       
       @scala.inline
-      def setCollect(value: /* data */ js.Any => _): Self = StObject.set(x, "collect", js.Any.fromFunction1(value))
+      def setCollect(value: /* data */ js.Any => ?): Self = StObject.set(x, "collect", js.Any.fromFunction1(value))
       
       @scala.inline
-      def setCollectUndefined: Self = StObject.set(x, "collect", js.undefined)
+      def setCollectUndefined: Self = StObject.set(x, "collect", ())
       
       @scala.inline
       def setDisable(value: Boolean): Self = StObject.set(x, "disable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDisableUndefined: Self = StObject.set(x, "disable", js.undefined)
+      def setDisableUndefined: Self = StObject.set(x, "disable", ())
       
       @scala.inline
       def setHoldToDisplay(value: Double): Self = StObject.set(x, "holdToDisplay", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setHoldToDisplayUndefined: Self = StObject.set(x, "holdToDisplay", js.undefined)
+      def setHoldToDisplayUndefined: Self = StObject.set(x, "holdToDisplay", ())
       
       @scala.inline
       def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRenderTag(value: ReactType[_]): Self = StObject.set(x, "renderTag", value.asInstanceOf[js.Any])
+      def setRenderTag(value: ReactType[js.Any]): Self = StObject.set(x, "renderTag", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRenderTagComponentClass(value: ComponentClassP[js.Object]): Self = StObject.set(x, "renderTag", value.asInstanceOf[js.Any])
+      def setRenderTagComponentClass(value: ComponentClassP[js.Any & js.Object]): Self = StObject.set(x, "renderTag", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRenderTagUndefined: Self = StObject.set(x, "renderTag", js.undefined)
+      def setRenderTagUndefined: Self = StObject.set(x, "renderTag", ())
     }
   }
   
@@ -255,28 +252,24 @@ object mod {
   @js.native
   trait MenuItemProps extends StObject {
     
-    var attributes: js.UndefOr[HTMLAttributes[HTMLDivElement]] = js.native
+    var attributes: scala.Unit | HTMLAttributes[HTMLDivElement] = js.native
     
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
-    var data: js.UndefOr[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ js.Any
-      ] = js.native
+    var data: scala.Unit | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ js.Any) = js.native
     
-    var disabled: js.UndefOr[Boolean] = js.native
+    var disabled: scala.Unit | Boolean = js.native
     
-    var divider: js.UndefOr[Boolean] = js.native
+    var divider: scala.Unit | Boolean = js.native
     
-    var onClick: js.UndefOr[
-        (js.Function3[
-          /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
-          /* target */ HTMLElement, 
-          Unit
-        ]) | js.Function
-      ] = js.native
+    var onClick: scala.Unit | (js.Function3[
+        /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], 
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+        /* target */ HTMLElement, 
+        Unit
+      ]) | js.Function = js.native
     
-    var preventClose: js.UndefOr[Boolean] = js.native
+    var preventClose: scala.Unit | Boolean = js.native
   }
   object MenuItemProps {
     
@@ -293,13 +286,13 @@ object mod {
       def setAttributes(value: HTMLAttributes[HTMLDivElement]): Self = StObject.set(x, "attributes", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAttributesUndefined: Self = StObject.set(x, "attributes", js.undefined)
+      def setAttributesUndefined: Self = StObject.set(x, "attributes", ())
       
       @scala.inline
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setData(
@@ -307,19 +300,19 @@ object mod {
       ): Self = StObject.set(x, "data", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDataUndefined: Self = StObject.set(x, "data", js.undefined)
+      def setDataUndefined: Self = StObject.set(x, "data", ())
       
       @scala.inline
       def setDisabled(value: Boolean): Self = StObject.set(x, "disabled", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDisabledUndefined: Self = StObject.set(x, "disabled", js.undefined)
+      def setDisabledUndefined: Self = StObject.set(x, "disabled", ())
       
       @scala.inline
       def setDivider(value: Boolean): Self = StObject.set(x, "divider", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDividerUndefined: Self = StObject.set(x, "divider", js.undefined)
+      def setDividerUndefined: Self = StObject.set(x, "divider", ())
       
       @scala.inline
       def setOnClick(
@@ -337,13 +330,13 @@ object mod {
       ): Self = StObject.set(x, "onClick", js.Any.fromFunction3((t0: /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], t1: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, t2: /* target */ HTMLElement) => (value(t0, t1, t2)).runNow()))
       
       @scala.inline
-      def setOnClickUndefined: Self = StObject.set(x, "onClick", js.undefined)
+      def setOnClickUndefined: Self = StObject.set(x, "onClick", ())
       
       @scala.inline
       def setPreventClose(value: Boolean): Self = StObject.set(x, "preventClose", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPreventCloseUndefined: Self = StObject.set(x, "preventClose", js.undefined)
+      def setPreventCloseUndefined: Self = StObject.set(x, "preventClose", ())
     }
   }
   
@@ -359,24 +352,22 @@ object mod {
   @js.native
   trait SubMenuProps extends StObject {
     
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
-    var disabled: js.UndefOr[Boolean] = js.native
+    var disabled: scala.Unit | Boolean = js.native
     
-    var hoverDelay: js.UndefOr[Double] = js.native
+    var hoverDelay: scala.Unit | Double = js.native
     
-    var onClick: js.UndefOr[
-        (js.Function3[
-          /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
-          /* target */ HTMLElement, 
-          Unit
-        ]) | js.Function
-      ] = js.native
+    var onClick: scala.Unit | (js.Function3[
+        /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], 
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, 
+        /* target */ HTMLElement, 
+        Unit
+      ]) | js.Function = js.native
     
-    var preventCloseOnClick: js.UndefOr[Boolean] = js.native
+    var preventCloseOnClick: scala.Unit | Boolean = js.native
     
-    var rtl: js.UndefOr[Boolean] = js.native
+    var rtl: scala.Unit | Boolean = js.native
     
     var title: Element | ReactText = js.native
   }
@@ -395,19 +386,19 @@ object mod {
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setDisabled(value: Boolean): Self = StObject.set(x, "disabled", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDisabledUndefined: Self = StObject.set(x, "disabled", js.undefined)
+      def setDisabledUndefined: Self = StObject.set(x, "disabled", ())
       
       @scala.inline
       def setHoverDelay(value: Double): Self = StObject.set(x, "hoverDelay", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setHoverDelayUndefined: Self = StObject.set(x, "hoverDelay", js.undefined)
+      def setHoverDelayUndefined: Self = StObject.set(x, "hoverDelay", ())
       
       @scala.inline
       def setOnClick(
@@ -425,19 +416,19 @@ object mod {
       ): Self = StObject.set(x, "onClick", js.Any.fromFunction3((t0: /* event */ ReactTouchEventFrom[HTMLDivElement] | ReactMouseEventFrom[HTMLDivElement], t1: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Object */ /* data */ js.Any, t2: /* target */ HTMLElement) => (value(t0, t1, t2)).runNow()))
       
       @scala.inline
-      def setOnClickUndefined: Self = StObject.set(x, "onClick", js.undefined)
+      def setOnClickUndefined: Self = StObject.set(x, "onClick", ())
       
       @scala.inline
       def setPreventCloseOnClick(value: Boolean): Self = StObject.set(x, "preventCloseOnClick", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPreventCloseOnClickUndefined: Self = StObject.set(x, "preventCloseOnClick", js.undefined)
+      def setPreventCloseOnClickUndefined: Self = StObject.set(x, "preventCloseOnClick", ())
       
       @scala.inline
       def setRtl(value: Boolean): Self = StObject.set(x, "rtl", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRtlUndefined: Self = StObject.set(x, "rtl", js.undefined)
+      def setRtlUndefined: Self = StObject.set(x, "rtl", ())
       
       @scala.inline
       def setTitle(value: Element | ReactText): Self = StObject.set(x, "title", value.asInstanceOf[js.Any])

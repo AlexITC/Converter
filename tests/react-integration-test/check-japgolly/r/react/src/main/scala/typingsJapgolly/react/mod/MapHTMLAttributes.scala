@@ -2,13 +2,12 @@ package typingsJapgolly.react.mod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait MapHTMLAttributes[T] extends HTMLAttributes[T] {
   
-  var name: js.UndefOr[String] = js.native
+  var name: scala.Unit | String = js.native
 }
 object MapHTMLAttributes {
   
@@ -19,12 +18,12 @@ object MapHTMLAttributes {
   }
   
   @scala.inline
-  implicit class MapHTMLAttributesMutableBuilder[Self <: MapHTMLAttributes[_], T] (val x: Self with MapHTMLAttributes[T]) extends AnyVal {
+  implicit class MapHTMLAttributesMutableBuilder[Self <: MapHTMLAttributes[?], T] (val x: Self & MapHTMLAttributes[T]) extends AnyVal {
     
     @scala.inline
     def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNameUndefined: Self = StObject.set(x, "name", js.undefined)
+    def setNameUndefined: Self = StObject.set(x, "name", ())
   }
 }

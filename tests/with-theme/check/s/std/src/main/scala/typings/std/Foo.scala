@@ -2,13 +2,12 @@ package typings.std
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Foo extends StObject {
   
-  var f: js.UndefOr[js.Function1[/* n */ Double, String]] = js.native
+  var f: scala.Unit | (js.Function1[/* n */ Double, String]) = js.native
 }
 object Foo {
   
@@ -25,6 +24,6 @@ object Foo {
     def setF(value: /* n */ Double => String): Self = StObject.set(x, "f", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setFUndefined: Self = StObject.set(x, "f", js.undefined)
+    def setFUndefined: Self = StObject.set(x, "f", ())
   }
 }

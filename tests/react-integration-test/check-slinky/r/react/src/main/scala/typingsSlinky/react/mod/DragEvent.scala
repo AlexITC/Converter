@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -25,7 +24,7 @@ object DragEvent {
     clientX: Double,
     clientY: Double,
     ctrlKey: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     dataTransfer: DataTransfer,
     defaultPrevented: Boolean,
     eventPhase: Double,
@@ -56,7 +55,7 @@ object DragEvent {
   }
   
   @scala.inline
-  implicit class DragEventMutableBuilder[Self <: DragEvent[_], T] (val x: Self with DragEvent[T]) extends AnyVal {
+  implicit class DragEventMutableBuilder[Self <: DragEvent[?], T] (val x: Self & DragEvent[T]) extends AnyVal {
     
     @scala.inline
     def setDataTransfer(value: DataTransfer): Self = StObject.set(x, "dataTransfer", value.asInstanceOf[js.Any])

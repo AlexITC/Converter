@@ -4,7 +4,6 @@ import typings.swiz.mod.struct.IField
 import typings.swiz.mod.struct.IObj
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -33,11 +32,11 @@ object mod {
   @js.native
   trait ISwizOptions extends StObject {
     
-    var `for`: js.UndefOr[String] = js.native
+    var `for`: scala.Unit | String = js.native
     
-    var stripNulls: js.UndefOr[Boolean] = js.native
+    var stripNulls: scala.Unit | Boolean = js.native
     
-    var stripSerializerType: js.UndefOr[Boolean] = js.native
+    var stripSerializerType: scala.Unit | Boolean = js.native
   }
   object ISwizOptions {
     
@@ -54,19 +53,19 @@ object mod {
       def setFor(value: String): Self = StObject.set(x, "for", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setForUndefined: Self = StObject.set(x, "for", js.undefined)
+      def setForUndefined: Self = StObject.set(x, "for", ())
       
       @scala.inline
       def setStripNulls(value: Boolean): Self = StObject.set(x, "stripNulls", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setStripNullsUndefined: Self = StObject.set(x, "stripNulls", js.undefined)
+      def setStripNullsUndefined: Self = StObject.set(x, "stripNulls", ())
       
       @scala.inline
       def setStripSerializerType(value: Boolean): Self = StObject.set(x, "stripSerializerType", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setStripSerializerTypeUndefined: Self = StObject.set(x, "stripSerializerType", js.undefined)
+      def setStripSerializerTypeUndefined: Self = StObject.set(x, "stripSerializerType", ())
     }
   }
   
@@ -119,7 +118,7 @@ object mod {
     
     def serializeForPagination(
       mode: SERIALIZATION,
-      array: js.Array[_],
+      array: js.Array[?],
       metadata: js.Any,
       callback: js.Function2[/* err */ js.Any, /* result */ String, Unit]
     ): Unit = js.native

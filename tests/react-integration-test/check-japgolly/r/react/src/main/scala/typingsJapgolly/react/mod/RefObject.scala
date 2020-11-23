@@ -3,7 +3,6 @@ package typingsJapgolly.react.mod
 import japgolly.scalajs.react.raw.React.RefHandle
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
@@ -20,7 +19,7 @@ object RefObject {
   }
   
   @scala.inline
-  implicit class RefObjectMutableBuilder[Self <: RefHandle[_], T] (val x: Self with RefHandle[T]) extends AnyVal {
+  implicit class RefObjectMutableBuilder[Self <: RefHandle[?], T] (val x: Self & RefHandle[T]) extends AnyVal {
     
     @scala.inline
     def setCurrent(value: T): Self = StObject.set(x, "current", value.asInstanceOf[js.Any])

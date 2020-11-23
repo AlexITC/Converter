@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -51,21 +50,19 @@ object mod {
   @js.native
   trait Options extends StObject {
     
-    var cascade: js.UndefOr[Boolean] = js.native
+    var cascade: scala.Unit | Boolean = js.native
     
-    var compress: js.UndefOr[Boolean] = js.native
+    var compress: scala.Unit | Boolean = js.native
     
-    var global: js.UndefOr[Boolean] = js.native
+    var global: scala.Unit | Boolean = js.native
     
-    var keyframe: js.UndefOr[Boolean] = js.native
+    var keyframe: scala.Unit | Boolean = js.native
     
-    var prefix: js.UndefOr[
-        Boolean | (js.Function3[/* key */ String, /* value */ String, /* context */ Double, Boolean])
-      ] = js.native
+    var prefix: scala.Unit | Boolean | (js.Function3[/* key */ String, /* value */ String, /* context */ Double, Boolean]) = js.native
     
-    var preserve: js.UndefOr[Boolean] = js.native
+    var preserve: scala.Unit | Boolean = js.native
     
-    var semicolon: js.UndefOr[Boolean] = js.native
+    var semicolon: scala.Unit | Boolean = js.native
   }
   object Options {
     
@@ -82,25 +79,25 @@ object mod {
       def setCascade(value: Boolean): Self = StObject.set(x, "cascade", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCascadeUndefined: Self = StObject.set(x, "cascade", js.undefined)
+      def setCascadeUndefined: Self = StObject.set(x, "cascade", ())
       
       @scala.inline
       def setCompress(value: Boolean): Self = StObject.set(x, "compress", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCompressUndefined: Self = StObject.set(x, "compress", js.undefined)
+      def setCompressUndefined: Self = StObject.set(x, "compress", ())
       
       @scala.inline
       def setGlobal(value: Boolean): Self = StObject.set(x, "global", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setGlobalUndefined: Self = StObject.set(x, "global", js.undefined)
+      def setGlobalUndefined: Self = StObject.set(x, "global", ())
       
       @scala.inline
       def setKeyframe(value: Boolean): Self = StObject.set(x, "keyframe", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setKeyframeUndefined: Self = StObject.set(x, "keyframe", js.undefined)
+      def setKeyframeUndefined: Self = StObject.set(x, "keyframe", ())
       
       @scala.inline
       def setPrefix(
@@ -111,19 +108,19 @@ object mod {
       def setPrefixFunction3(value: (/* key */ String, /* value */ String, /* context */ Double) => Boolean): Self = StObject.set(x, "prefix", js.Any.fromFunction3(value))
       
       @scala.inline
-      def setPrefixUndefined: Self = StObject.set(x, "prefix", js.undefined)
+      def setPrefixUndefined: Self = StObject.set(x, "prefix", ())
       
       @scala.inline
       def setPreserve(value: Boolean): Self = StObject.set(x, "preserve", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPreserveUndefined: Self = StObject.set(x, "preserve", js.undefined)
+      def setPreserveUndefined: Self = StObject.set(x, "preserve", ())
       
       @scala.inline
       def setSemicolon(value: Boolean): Self = StObject.set(x, "semicolon", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setSemicolonUndefined: Self = StObject.set(x, "semicolon", js.undefined)
+      def setSemicolonUndefined: Self = StObject.set(x, "semicolon", ())
     }
   }
   

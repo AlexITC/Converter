@@ -8,11 +8,10 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TouchEvent[T] extends BaseSyntheticEvent[Event, EventTarget with T, EventTarget] {
+trait TouchEvent[T] extends BaseSyntheticEvent[Event, EventTarget & T, EventTarget] {
   
   var altKey: Boolean = js.native
   
@@ -42,7 +41,7 @@ object TouchEvent {
     cancelable: Boolean,
     changedTouches: TouchList,
     ctrlKey: Boolean,
-    currentTarget: EventTarget with T,
+    currentTarget: EventTarget & T,
     defaultPrevented: Boolean,
     eventPhase: Double,
     getModifierState: String => Boolean,
@@ -60,14 +59,14 @@ object TouchEvent {
     timeStamp: Double,
     touches: TouchList,
     `type`: String
-  ): ReactTouchEventFrom[T with Element] = {
+  ): ReactTouchEventFrom[T & Element] = {
     val __obj = js.Dynamic.literal(altKey = altKey.asInstanceOf[js.Any], bubbles = bubbles.asInstanceOf[js.Any], cancelable = cancelable.asInstanceOf[js.Any], changedTouches = changedTouches.asInstanceOf[js.Any], ctrlKey = ctrlKey.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], defaultPrevented = defaultPrevented.asInstanceOf[js.Any], eventPhase = eventPhase.asInstanceOf[js.Any], getModifierState = js.Any.fromFunction1(getModifierState), isDefaultPrevented = isDefaultPrevented.toJsFn, isPropagationStopped = isPropagationStopped.toJsFn, isTrusted = isTrusted.asInstanceOf[js.Any], metaKey = metaKey.asInstanceOf[js.Any], nativeEvent = nativeEvent.asInstanceOf[js.Any], persist = persist.toJsFn, preventDefault = preventDefault.toJsFn, shiftKey = shiftKey.asInstanceOf[js.Any], stopPropagation = stopPropagation.toJsFn, target = target.asInstanceOf[js.Any], targetTouches = targetTouches.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], touches = touches.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ReactTouchEventFrom[T with Element]]
+    __obj.asInstanceOf[ReactTouchEventFrom[T & Element]]
   }
   
   @scala.inline
-  implicit class TouchEventMutableBuilder[Self <: ReactTouchEventFrom[Element], T] (val x: Self with (ReactTouchEventFrom[T with Element])) extends AnyVal {
+  implicit class TouchEventMutableBuilder[Self <: ReactTouchEventFrom[Element], T] (val x: Self & (ReactTouchEventFrom[T & Element])) extends AnyVal {
     
     @scala.inline
     def setAltKey(value: Boolean): Self = StObject.set(x, "altKey", value.asInstanceOf[js.Any])

@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsJapgolly.react.mod.StatelessComponent
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object buttonOrMod {
@@ -30,13 +29,13 @@ object buttonOrMod {
   trait StrictButtonOrProps extends StObject {
     
     /** An element type to render as (string or function). */
-    var as: js.UndefOr[js.Any] = js.native
+    var as: scala.Unit | js.Any = js.native
     
     /** Additional classes. */
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
     /** Or buttons can have their text localized, or adjusted by using the text prop. */
-    var text: js.UndefOr[Double | String] = js.native
+    var text: scala.Unit | Double | String = js.native
   }
   object StrictButtonOrProps {
     
@@ -53,19 +52,19 @@ object buttonOrMod {
       def setAs(value: js.Any): Self = StObject.set(x, "as", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAsUndefined: Self = StObject.set(x, "as", js.undefined)
+      def setAsUndefined: Self = StObject.set(x, "as", ())
       
       @scala.inline
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setText(value: Double | String): Self = StObject.set(x, "text", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setTextUndefined: Self = StObject.set(x, "text", js.undefined)
+      def setTextUndefined: Self = StObject.set(x, "text", ())
     }
   }
 }

@@ -3,13 +3,12 @@ package typingsSlinky.semanticUiReact.genericMod
 import slinky.core.facade.ReactElement
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait StrictHtmlSpanProps extends StObject {
   
-  var children: js.UndefOr[ReactElement] = js.native
+  var children: scala.Unit | ReactElement = js.native
 }
 object StrictHtmlSpanProps {
   
@@ -29,6 +28,6 @@ object StrictHtmlSpanProps {
     def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+    def setChildrenUndefined: Self = StObject.set(x, "children", ())
   }
 }

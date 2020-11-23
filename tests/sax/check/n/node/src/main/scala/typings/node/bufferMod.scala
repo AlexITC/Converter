@@ -4,7 +4,6 @@ import typings.std.ArrayBuffer
 import typings.std.Uint8Array
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /************************************************
@@ -41,7 +40,7 @@ object bufferMod {
       *
       * @param array The octets to store.
       */
-    def this(array: js.Array[_]) = this()
+    def this(array: js.Array[?]) = this()
     /**
       * Allocates a new buffer containing the given {array} of octets.
       *
@@ -82,14 +81,14 @@ object bufferMod {
       */
     @JSImport("buffer", "Buffer.from")
     @js.native
-    def from(array: js.Array[_]): typings.node.Buffer = js.native
+    def from(array: js.Array[?]): typings.node.Buffer = js.native
   }
   
   /* This class was inferred from a value with a constructor. In rare cases (like HTMLElement in the DOM) it might not work as you expect. */
   @JSImport("buffer", "SlowBuffer")
   @js.native
   class SlowBuffer protected () extends NodeBuffer {
-    def this(array: js.Array[_]) = this()
+    def this(array: js.Array[?]) = this()
     def this(size: Double) = this()
     def this(size: Uint8Array) = this()
     def this(str: String) = this()

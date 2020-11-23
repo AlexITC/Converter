@@ -7,7 +7,6 @@ import typings.vue.vueMod.VueConstructor
 import typings.vueScrollto.vueScrolltoBooleans.`false`
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* static members */
@@ -36,37 +35,37 @@ object mod {
   trait Options extends StObject {
     
     // Indicates if user can cancel the scroll or not. Default: true
-    var cancelable: js.UndefOr[Boolean] = js.native
+    var cancelable: scala.Unit | Boolean = js.native
     
     // The container that has to be scrolled. Default: body
-    var container: js.UndefOr[String | Element] = js.native
+    var container: scala.Unit | String | Element = js.native
     
     // The duration (in milliseconds) of the scrolling animation. Default: 500
-    var duration: js.UndefOr[Double] = js.native
+    var duration: scala.Unit | Double = js.native
     
     // The easing to be used when animating. Default: ease
-    var easing: js.UndefOr[String] = js.native
+    var easing: scala.Unit | String = js.native
     
     // The element you want to scroll to.
-    var el: js.UndefOr[String | Element] = js.native
+    var el: scala.Unit | String | Element = js.native
     
-    var element: js.UndefOr[String | Element] = js.native
+    var element: scala.Unit | String | Element = js.native
     
     // The offset that should be applied when scrolling. Default: 0
-    var offset: js.UndefOr[Double] = js.native
+    var offset: scala.Unit | Double = js.native
     
     // A callback function that should be called when scrolling has been aborted by the user (user scrolled, clicked
     // etc.). Default: noop
-    var onCancel: js.UndefOr[js.Function0[Unit] | `false`] = js.native
+    var onCancel: scala.Unit | js.Function0[Unit] | `false` = js.native
     
     // A callback function that should be called when scrolling has ended. Default: noop
-    var onDone: js.UndefOr[js.Function0[Unit] | `false`] = js.native
+    var onDone: scala.Unit | js.Function0[Unit] | `false` = js.native
     
     // Whether or not we want scrolling on the x axis. Default: true
-    var x: js.UndefOr[Boolean] = js.native
+    var x: scala.Unit | Boolean = js.native
     
     // Whether or not we want scrolling on the y axis. Default: true
-    var y: js.UndefOr[Boolean] = js.native
+    var y: scala.Unit | Boolean = js.native
   }
   object Options {
     
@@ -83,43 +82,43 @@ object mod {
       def setCancelable(value: Boolean): Self = StObject.set(x, "cancelable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setCancelableUndefined: Self = StObject.set(x, "cancelable", js.undefined)
+      def setCancelableUndefined: Self = StObject.set(x, "cancelable", ())
       
       @scala.inline
       def setContainer(value: String | Element): Self = StObject.set(x, "container", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setContainerUndefined: Self = StObject.set(x, "container", js.undefined)
+      def setContainerUndefined: Self = StObject.set(x, "container", ())
       
       @scala.inline
       def setDuration(value: Double): Self = StObject.set(x, "duration", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDurationUndefined: Self = StObject.set(x, "duration", js.undefined)
+      def setDurationUndefined: Self = StObject.set(x, "duration", ())
       
       @scala.inline
       def setEasing(value: String): Self = StObject.set(x, "easing", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setEasingUndefined: Self = StObject.set(x, "easing", js.undefined)
+      def setEasingUndefined: Self = StObject.set(x, "easing", ())
       
       @scala.inline
       def setEl(value: String | Element): Self = StObject.set(x, "el", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setElUndefined: Self = StObject.set(x, "el", js.undefined)
+      def setElUndefined: Self = StObject.set(x, "el", ())
       
       @scala.inline
       def setElement(value: String | Element): Self = StObject.set(x, "element", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setElementUndefined: Self = StObject.set(x, "element", js.undefined)
+      def setElementUndefined: Self = StObject.set(x, "element", ())
       
       @scala.inline
       def setOffset(value: Double): Self = StObject.set(x, "offset", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setOffsetUndefined: Self = StObject.set(x, "offset", js.undefined)
+      def setOffsetUndefined: Self = StObject.set(x, "offset", ())
       
       @scala.inline
       def setOnCancel(value: js.Function0[Unit] | `false`): Self = StObject.set(x, "onCancel", value.asInstanceOf[js.Any])
@@ -128,7 +127,7 @@ object mod {
       def setOnCancelFunction0(value: () => Unit): Self = StObject.set(x, "onCancel", js.Any.fromFunction0(value))
       
       @scala.inline
-      def setOnCancelUndefined: Self = StObject.set(x, "onCancel", js.undefined)
+      def setOnCancelUndefined: Self = StObject.set(x, "onCancel", ())
       
       @scala.inline
       def setOnDone(value: js.Function0[Unit] | `false`): Self = StObject.set(x, "onDone", value.asInstanceOf[js.Any])
@@ -137,19 +136,19 @@ object mod {
       def setOnDoneFunction0(value: () => Unit): Self = StObject.set(x, "onDone", js.Any.fromFunction0(value))
       
       @scala.inline
-      def setOnDoneUndefined: Self = StObject.set(x, "onDone", js.undefined)
+      def setOnDoneUndefined: Self = StObject.set(x, "onDone", ())
       
       @scala.inline
       def setX(value: Boolean): Self = StObject.set(x, "x", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setXUndefined: Self = StObject.set(x, "x", js.undefined)
+      def setXUndefined: Self = StObject.set(x, "x", ())
       
       @scala.inline
       def setY(value: Boolean): Self = StObject.set(x, "y", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setYUndefined: Self = StObject.set(x, "y", js.undefined)
+      def setYUndefined: Self = StObject.set(x, "y", ())
     }
   }
   

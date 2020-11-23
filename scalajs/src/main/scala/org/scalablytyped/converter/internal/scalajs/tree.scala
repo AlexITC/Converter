@@ -512,10 +512,8 @@ sealed trait ExprTree extends ImplTree
 
 object ExprTree {
 
-  val undefined = Ref(QualifiedName.scala_js + Name("undefined"))
-  val native    = Ref(QualifiedName.scala_js + Name("native"))
+  val native = Ref(QualifiedName.scala_js + Name("native"))
 
-  case object Null extends ExprTree
   case class BinaryOp(one:          ExprTree, op: String, two: ExprTree) extends ExprTree
   case class Block(expressions:     IArray[ExprTree]) extends ExprTree
   case class Call(function:         ExprTree, params: IArray[IArray[Arg]]) extends ExprTree
@@ -547,6 +545,8 @@ object ExprTree {
   case class BooleanLit(value: Boolean) extends Lit
   case class NumberLit(value:  String) extends Lit
   case class StringLit(value:  String) extends Lit
+  case object undefined extends Lit
+  case object Null extends Lit
 
   sealed trait Arg extends ExprTree
   object Arg {

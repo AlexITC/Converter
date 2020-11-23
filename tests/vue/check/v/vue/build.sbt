@@ -1,13 +1,13 @@
 organization := "org.scalablytyped"
 name := "vue"
-version := "2.5.13-15050d"
-scalaVersion := "2.13.3"
+version := "2.5.13-0d6588"
+scalaVersion := "3.0.0-M2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.3.0",
-  "org.scalablytyped" %%% "std" % "0.0-unknown-9327fa")
+  "org.scalablytyped" %%% "std" % "0.0-unknown-587783")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

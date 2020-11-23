@@ -4,13 +4,12 @@ import typingsSlinky.react.reactStrings.mount
 import typingsSlinky.react.reactStrings.update
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ProfilerProps extends StObject {
   
-  var children: js.UndefOr[slinky.core.facade.ReactElement] = js.native
+  var children: scala.Unit | slinky.core.facade.ReactElement = js.native
   
   var id: String = js.native
   
@@ -37,7 +36,7 @@ object ProfilerProps {
     def setChildrenReactElement(value: slinky.core.facade.ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+    def setChildrenUndefined: Self = StObject.set(x, "children", ())
     
     @scala.inline
     def setId(value: String): Self = StObject.set(x, "id", value.asInstanceOf[js.Any])

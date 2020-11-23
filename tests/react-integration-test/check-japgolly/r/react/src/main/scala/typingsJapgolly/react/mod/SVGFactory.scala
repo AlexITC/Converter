@@ -4,13 +4,12 @@ import japgolly.scalajs.react.raw.React.Node
 import org.scalajs.dom.raw.SVGElement
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SVGFactory extends DOMFactory[SVGAttributes[SVGElement], SVGElement] {
   
-  def apply(props: ClassAttributes[SVGElement] with SVGAttributes[SVGElement], children: Node*): ReactSVGElement = js.native
-  def apply(props: js.UndefOr[scala.Nothing], children: Node*): ReactSVGElement = js.native
+  def apply(props: ClassAttributes[SVGElement] & SVGAttributes[SVGElement], children: Node*): ReactSVGElement = js.native
   def apply(props: Null, children: Node*): ReactSVGElement = js.native
+  def apply(props: Unit, children: Node*): ReactSVGElement = js.native
 }

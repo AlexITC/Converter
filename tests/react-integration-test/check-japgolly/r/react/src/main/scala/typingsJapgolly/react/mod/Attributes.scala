@@ -2,13 +2,12 @@ package typingsJapgolly.react.mod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Attributes extends StObject {
   
-  var key: js.UndefOr[Key] = js.native
+  var key: scala.Unit | Key = js.native
 }
 object Attributes {
   
@@ -25,6 +24,6 @@ object Attributes {
     def setKey(value: Key): Self = StObject.set(x, "key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKeyUndefined: Self = StObject.set(x, "key", js.undefined)
+    def setKeyUndefined: Self = StObject.set(x, "key", ())
   }
 }

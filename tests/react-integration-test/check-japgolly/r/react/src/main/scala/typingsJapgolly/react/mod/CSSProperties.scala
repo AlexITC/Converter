@@ -2,7 +2,6 @@ package typingsJapgolly.react.mod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CSSProperties extends StObject {
   
   /* fake member to keep old syntax */
-  val hack: js.UndefOr[js.Any] = js.native
+  val hack: scala.Unit | js.Any = js.native
 }
 object CSSProperties {
   
@@ -27,6 +26,6 @@ object CSSProperties {
     def setHack(value: js.Any): Self = StObject.set(x, "hack", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHackUndefined: Self = StObject.set(x, "hack", js.undefined)
+    def setHackUndefined: Self = StObject.set(x, "hack", ())
   }
 }

@@ -2,14 +2,13 @@ package typingsSlinky.react.mod
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClassicComponent[P, S]
   extends Component[P, S, js.Any] {
   
-  var getInitialState: js.UndefOr[js.Function0[S]] = js.native
+  var getInitialState: scala.Unit | js.Function0[S] = js.native
   
   def isMounted(): Boolean = js.native
   

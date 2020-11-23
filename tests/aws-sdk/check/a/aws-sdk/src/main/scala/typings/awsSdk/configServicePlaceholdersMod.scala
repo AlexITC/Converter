@@ -4,7 +4,6 @@ import typings.awsSdk.dynamodbMod.ClientConfiguration
 import typings.awsSdk.dynamodbMod.apiVersion
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object configServicePlaceholdersMod {
@@ -12,7 +11,7 @@ object configServicePlaceholdersMod {
   @js.native
   trait ConfigurationServiceApiVersions extends StObject {
     
-    var dynamodb: js.UndefOr[apiVersion] = js.native
+    var dynamodb: scala.Unit | apiVersion = js.native
   }
   object ConfigurationServiceApiVersions {
     
@@ -29,7 +28,7 @@ object configServicePlaceholdersMod {
       def setDynamodb(value: apiVersion): Self = StObject.set(x, "dynamodb", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setDynamodbUndefined: Self = StObject.set(x, "dynamodb", js.undefined)
+      def setDynamodbUndefined: Self = StObject.set(x, "dynamodb", ())
     }
   }
   
@@ -37,6 +36,6 @@ object configServicePlaceholdersMod {
   @js.native
   abstract class ConfigurationServicePlaceholders () extends StObject {
     
-    var dynamodb: js.UndefOr[ClientConfiguration] = js.native
+    var dynamodb: scala.Unit | ClientConfiguration = js.native
   }
 }

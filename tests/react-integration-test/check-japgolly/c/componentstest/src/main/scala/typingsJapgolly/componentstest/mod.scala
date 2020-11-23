@@ -12,7 +12,6 @@ import typingsJapgolly.react.mod.FunctionComponent
 import typingsJapgolly.react.mod.MouseEventHandler
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -62,7 +61,7 @@ object mod {
   @js.native
   trait B extends Props {
     
-    var bCallback: js.UndefOr[js.Function0[String]] = js.native
+    var bCallback: scala.Unit | js.Function0[String] = js.native
     
     var bMember: String = js.native
   }
@@ -81,7 +80,7 @@ object mod {
       def setBCallback(value: CallbackTo[String]): Self = StObject.set(x, "bCallback", value.toJsFn)
       
       @scala.inline
-      def setBCallbackUndefined: Self = StObject.set(x, "bCallback", js.undefined)
+      def setBCallbackUndefined: Self = StObject.set(x, "bCallback", ())
       
       @scala.inline
       def setBMember(value: String): Self = StObject.set(x, "bMember", value.asInstanceOf[js.Any])
@@ -91,13 +90,13 @@ object mod {
   @js.native
   trait CardGridProps extends StObject {
     
-    var className: js.UndefOr[String] = js.native
+    var className: scala.Unit | String = js.native
     
-    var hoverable: js.UndefOr[Boolean] = js.native
+    var hoverable: scala.Unit | Boolean = js.native
     
-    var prefixCls: js.UndefOr[String] = js.native
+    var prefixCls: scala.Unit | String = js.native
     
-    var style: js.UndefOr[CSSProperties] = js.native
+    var style: scala.Unit | CSSProperties = js.native
   }
   object CardGridProps {
     
@@ -114,25 +113,25 @@ object mod {
       def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+      def setClassNameUndefined: Self = StObject.set(x, "className", ())
       
       @scala.inline
       def setHoverable(value: Boolean): Self = StObject.set(x, "hoverable", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setHoverableUndefined: Self = StObject.set(x, "hoverable", js.undefined)
+      def setHoverableUndefined: Self = StObject.set(x, "hoverable", ())
       
       @scala.inline
       def setPrefixCls(value: String): Self = StObject.set(x, "prefixCls", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", js.undefined)
+      def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", ())
       
       @scala.inline
       def setStyle(value: CSSProperties): Self = StObject.set(x, "style", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setStyleUndefined: Self = StObject.set(x, "style", js.undefined)
+      def setStyleUndefined: Self = StObject.set(x, "style", ())
     }
   }
   
@@ -146,9 +145,9 @@ object mod {
   @js.native
   trait CardProps extends StObject {
     
-    var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
+    var onClick: scala.Unit | MouseEventHandler[HTMLDivElement] = js.native
     
-    var prefixCls: js.UndefOr[String] = js.native
+    var prefixCls: scala.Unit | String = js.native
   }
   object CardProps {
     
@@ -165,13 +164,13 @@ object mod {
       def setOnClick(value: ReactMouseEventFrom[HTMLDivElement] => Callback): Self = StObject.set(x, "onClick", js.Any.fromFunction1((t0: ReactMouseEventFrom[HTMLDivElement]) => value(t0).runNow()))
       
       @scala.inline
-      def setOnClickUndefined: Self = StObject.set(x, "onClick", js.undefined)
+      def setOnClickUndefined: Self = StObject.set(x, "onClick", ())
       
       @scala.inline
       def setPrefixCls(value: String): Self = StObject.set(x, "prefixCls", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", js.undefined)
+      def setPrefixClsUndefined: Self = StObject.set(x, "prefixCls", ())
     }
   }
   

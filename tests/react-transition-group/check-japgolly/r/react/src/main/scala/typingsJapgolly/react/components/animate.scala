@@ -5,14 +5,13 @@ import typingsJapgolly.StBuildingComponent.Default
 import typingsJapgolly.react.mod.ClassAttributes
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object animate {
   
   val component: String = "animate"
   
-  implicit def make(companion: animate.type): Default[SVGElement with js.Object] = new Default[SVGElement with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: animate.type): Default[SVGElement & js.Object] = new Default[SVGElement & js.Object](js.Array(this.component, js.Dictionary.empty))()
   
-  def withProps(p: ClassAttributes[SVGElement]): Default[SVGElement with js.Object] = new Default[SVGElement with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ClassAttributes[SVGElement]): Default[SVGElement & js.Object] = new Default[SVGElement & js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
 }

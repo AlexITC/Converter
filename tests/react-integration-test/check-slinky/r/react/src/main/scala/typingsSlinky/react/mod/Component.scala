@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Pick
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Base component for plain JS classes
@@ -38,7 +37,7 @@ class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {
   // always pass children as variadic arguments to `createElement`.
   // In the future, if we can define its call signature conditionally
   // on the existence of `children` in `P`, then we should remove this.
-  val props: P with typingsSlinky.react.anon.Children = js.native
+  val props: P & typingsSlinky.react.anon.Children = js.native
   
   /**
     * @deprecated
@@ -95,7 +94,7 @@ object Component {
     */
   @JSImport("react", "Component.contextType")
   @js.native
-  def contextType: js.UndefOr[Context[js.Any]] = js.native
+  def contextType: scala.Unit | Context[?] = js.native
   @scala.inline
-  def contextType_=(x: js.UndefOr[Context[js.Any]]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("contextType")(x.asInstanceOf[js.Any])
+  def contextType_=(x: scala.Unit | Context[?]): Unit = ^.asInstanceOf[js.Dynamic].updateDynamic("contextType")(x.asInstanceOf[js.Any])
 }

@@ -3,7 +3,6 @@ package typings.monacoEditor
 import typings.monacoEditor.anon.Key
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object global {
@@ -35,7 +34,7 @@ object global {
       
       @JSGlobal("monaco.Promise.any")
       @js.native
-      def any[T](promises: js.Array[T | js.Thenable[T]]): typings.monacoEditor.monaco.Promise[Key[T], _] = js.native
+      def any[T](promises: js.Array[T | js.Thenable[T]]): typings.monacoEditor.monaco.Promise[Key[T], ?] = js.native
     }
   }
 }

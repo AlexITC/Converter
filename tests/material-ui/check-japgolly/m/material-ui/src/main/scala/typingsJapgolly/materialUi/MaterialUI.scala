@@ -3,7 +3,6 @@ package typingsJapgolly.materialUi
 import japgolly.scalajs.react.raw.React.Component
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object MaterialUI {
@@ -15,7 +14,7 @@ object MaterialUI {
       
       var children: Double = js.native
       
-      var className: js.UndefOr[String] = js.native
+      var className: scala.Unit | String = js.native
     }
     object BottomNavigationItemProps {
       
@@ -35,11 +34,11 @@ object MaterialUI {
         def setClassName(value: String): Self = StObject.set(x, "className", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setClassNameUndefined: Self = StObject.set(x, "className", js.undefined)
+        def setClassNameUndefined: Self = StObject.set(x, "className", ())
       }
     }
     
-    type BottomNavigationItem = Component[BottomNavigationItemProps with js.Object, js.Object]
+    type BottomNavigationItem = Component[BottomNavigationItemProps & js.Object, js.Object]
   }
   
   object Styles {
@@ -47,7 +46,7 @@ object MaterialUI {
     @js.native
     trait MuiTheme extends StObject {
       
-      var spacing: js.UndefOr[js.Any] = js.native
+      var spacing: scala.Unit | js.Any = js.native
     }
     object MuiTheme {
       
@@ -64,7 +63,7 @@ object MaterialUI {
         def setSpacing(value: js.Any): Self = StObject.set(x, "spacing", value.asInstanceOf[js.Any])
         
         @scala.inline
-        def setSpacingUndefined: Self = StObject.set(x, "spacing", js.undefined)
+        def setSpacingUndefined: Self = StObject.set(x, "spacing", ())
       }
     }
   }

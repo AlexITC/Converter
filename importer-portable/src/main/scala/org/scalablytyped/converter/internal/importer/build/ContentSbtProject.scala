@@ -23,7 +23,7 @@ object ContentSbtProject {
   ): SbtProjectLayout[os.RelPath, Array[Byte]] = {
 
     val buildSbt = {
-      val allDeps: IArray[Dep] = IArray.fromTraversable(deps) ++ IArray(Versions.runtime) ++ localDeps.map(d =>
+      val allDeps: IArray[Dep] = IArray.fromTraversable(deps) ++ IArray(versions.runtime) ++ localDeps.map(d =>
         d.project.reference,
       )
       val depsString = allDeps.map(_.asSbt).distinct.sorted.mkString("Seq(\n  ", ",\n  ", ")")
@@ -46,7 +46,7 @@ object ContentSbtProject {
     }
 
     val pluginsSbt = IArray
-      .fromOptions(Some(versions.scalaJs.sbtPlugin), publisherOpt.map(_.sbtPlugin))
+      .fromOptions(Some(versions.scalaJs.sbtPlugin), publisherOpt.map(_.sbtPlugin), versions.scala.sbtDotty)
       .map(dep => s"addSbtPlugin(${dep.asSbt})")
       .mkString("", "\n", "\n")
 

@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.std.Exclude
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object anon {
@@ -36,7 +35,7 @@ object anon {
   @js.native
   trait `1` extends StObject {
     
-    var ref: js.UndefOr[Exclude[_, String]] = js.native
+    var ref: scala.Unit | (Exclude[js.Any, String]) = js.native
   }
   object `1` {
     
@@ -50,17 +49,17 @@ object anon {
     implicit class `1MutableBuilder`[Self <: `1`] (val x: Self) extends AnyVal {
       
       @scala.inline
-      def setRef(value: Exclude[_, String]): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
+      def setRef(value: Exclude[js.Any, String]): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRefUndefined: Self = StObject.set(x, "ref", js.undefined)
+      def setRefUndefined: Self = StObject.set(x, "ref", ())
     }
   }
   
   @js.native
   trait Children extends StObject {
     
-    var children: js.UndefOr[ReactElement] = js.native
+    var children: scala.Unit | ReactElement = js.native
   }
   object Children {
     
@@ -80,7 +79,7 @@ object anon {
       def setChildrenReactElement(value: ReactElement): Self = StObject.set(x, "children", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setChildrenUndefined: Self = StObject.set(x, "children", js.undefined)
+      def setChildrenUndefined: Self = StObject.set(x, "children", ())
     }
   }
   
@@ -158,9 +157,7 @@ object anon {
   @js.native
   trait Ref extends StObject {
     
-    var ref: js.UndefOr[
-        /* import warning: importer.ImportType#apply Failed type conversion: infer R */ js.Any
-      ] = js.native
+    var ref: scala.Unit | (/* import warning: importer.ImportType#apply Failed type conversion: infer R */ js.Any) = js.native
   }
   object Ref {
     
@@ -177,25 +174,25 @@ object anon {
       def setRef(value: /* import warning: importer.ImportType#apply Failed type conversion: infer R */ js.Any): Self = StObject.set(x, "ref", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setRefUndefined: Self = StObject.set(x, "ref", js.undefined)
+      def setRefUndefined: Self = StObject.set(x, "ref", ())
     }
   }
   
   @js.native
-  trait Result[T /* <: ReactComponentClass[_] */] extends StObject {
+  trait Result[T /* <: ReactComponentClass[js.Any] */] extends StObject {
     
     val _result: T = js.native
   }
   object Result {
     
     @scala.inline
-    def apply[T /* <: ReactComponentClass[_] */](_result: T): Result[T] = {
+    def apply[T /* <: ReactComponentClass[js.Any] */](_result: T): Result[T] = {
       val __obj = js.Dynamic.literal(_result = _result.asInstanceOf[js.Any])
       __obj.asInstanceOf[Result[T]]
     }
     
     @scala.inline
-    implicit class ResultMutableBuilder[Self <: Result[_], T /* <: ReactComponentClass[_] */] (val x: Self with Result[T]) extends AnyVal {
+    implicit class ResultMutableBuilder[Self <: Result[?], T /* <: ReactComponentClass[js.Any] */] (val x: Self & Result[T]) extends AnyVal {
       
       @scala.inline
       def set_result(value: T): Self = StObject.set(x, "_result", value.asInstanceOf[js.Any])
@@ -203,21 +200,21 @@ object anon {
   }
   
   @js.native
-  trait Type[T /* <: ReactComponentClass[_] */] extends StObject {
+  trait Type[T /* <: ReactComponentClass[js.Any] */] extends StObject {
     
     val `type`: T = js.native
   }
   object Type {
     
     @scala.inline
-    def apply[T /* <: ReactComponentClass[_] */](`type`: T): Type[T] = {
+    def apply[T /* <: ReactComponentClass[js.Any] */](`type`: T): Type[T] = {
       val __obj = js.Dynamic.literal()
       __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
       __obj.asInstanceOf[Type[T]]
     }
     
     @scala.inline
-    implicit class TypeMutableBuilder[Self <: Type[_], T /* <: ReactComponentClass[_] */] (val x: Self with Type[T]) extends AnyVal {
+    implicit class TypeMutableBuilder[Self <: Type[?], T /* <: ReactComponentClass[js.Any] */] (val x: Self & Type[T]) extends AnyVal {
       
       @scala.inline
       def setType(value: T): Self = StObject.set(x, "type", value.asInstanceOf[js.Any])

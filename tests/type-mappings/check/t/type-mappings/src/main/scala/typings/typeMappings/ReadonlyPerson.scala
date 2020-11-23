@@ -2,14 +2,13 @@ package typings.typeMappings
 
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined std.Readonly<type-mappings.Person> */
 @js.native
 trait ReadonlyPerson extends StObject {
   
-  val age: js.UndefOr[scala.Double | Null] = js.native
+  val age: scala.Unit | scala.Double | Null = js.native
   
   val name: String = js.native
 }
@@ -31,7 +30,7 @@ object ReadonlyPerson {
     def setAgeNull: Self = StObject.set(x, "age", null)
     
     @scala.inline
-    def setAgeUndefined: Self = StObject.set(x, "age", js.undefined)
+    def setAgeUndefined: Self = StObject.set(x, "age", ())
     
     @scala.inline
     def setName(value: String): Self = StObject.set(x, "name", value.asInstanceOf[js.Any])

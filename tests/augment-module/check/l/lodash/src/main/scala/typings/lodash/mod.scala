@@ -3,7 +3,6 @@ package typings.lodash
 import typings.std.ArrayLike
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object mod {
@@ -52,10 +51,10 @@ object mod {
     def at[T /* <: js.Object */](`object`: T, props: (Many[/* keyof T */ String])*): js.Array[
         /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
       ] = js.native
-    def at[T /* <: js.Object */](`object`: js.UndefOr[scala.Nothing], props: (Many[/* keyof T */ String])*): js.Array[
+    def at[T /* <: js.Object */](`object`: Null, props: (Many[/* keyof T */ String])*): js.Array[
         /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
       ] = js.native
-    def at[T /* <: js.Object */](`object`: Null, props: (Many[/* keyof T */ String])*): js.Array[
+    def at[T /* <: js.Object */](`object`: Unit, props: (Many[/* keyof T */ String])*): js.Array[
         /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
       ] = js.native
     /**
@@ -68,9 +67,9 @@ object mod {
       */
     def at[T](`object`: List[T], props: PropertyPath*): js.Array[T] = js.native
     @JSName("at")
-    def at_T[T](`object`: js.UndefOr[scala.Nothing], props: PropertyPath*): js.Array[T] = js.native
-    @JSName("at")
     def at_T[T](`object`: Null, props: PropertyPath*): js.Array[T] = js.native
+    @JSName("at")
+    def at_T[T](`object`: Unit, props: PropertyPath*): js.Array[T] = js.native
   }
   
   // Backward compatibility with --target es5

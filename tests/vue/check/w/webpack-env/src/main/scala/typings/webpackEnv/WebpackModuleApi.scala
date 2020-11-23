@@ -5,7 +5,6 @@ import typings.std.Error
 import typings.std.RegExp
 import org.scalablytyped.runtime.StObject
 import scala.scalajs.js
-import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object WebpackModuleApi {
@@ -16,12 +15,12 @@ object WebpackModuleApi {
     /**
       * Indicates that apply() is automatically called by check function
       */
-    var autoApply: js.UndefOr[Boolean] = js.native
+    var autoApply: scala.Unit | Boolean = js.native
     
     /**
       * If true the update process continues even if some modules are not accepted (and would bubble to the entry point).
       */
-    var ignoreUnaccepted: js.UndefOr[Boolean] = js.native
+    var ignoreUnaccepted: scala.Unit | Boolean = js.native
   }
   object AcceptOptions {
     
@@ -38,13 +37,13 @@ object WebpackModuleApi {
       def setAutoApply(value: Boolean): Self = StObject.set(x, "autoApply", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setAutoApplyUndefined: Self = StObject.set(x, "autoApply", js.undefined)
+      def setAutoApplyUndefined: Self = StObject.set(x, "autoApply", ())
       
       @scala.inline
       def setIgnoreUnaccepted(value: Boolean): Self = StObject.set(x, "ignoreUnaccepted", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setIgnoreUnacceptedUndefined: Self = StObject.set(x, "ignoreUnaccepted", js.undefined)
+      def setIgnoreUnacceptedUndefined: Self = StObject.set(x, "ignoreUnaccepted", ())
     }
   }
   
@@ -183,13 +182,13 @@ object WebpackModuleApi {
   @js.native
   trait Module extends StObject {
     
-    var children: js.Array[_] = js.native
+    var children: js.Array[?] = js.native
     
     var exports: js.Any = js.native
     
     var filename: String = js.native
     
-    var hot: js.UndefOr[Hot] = js.native
+    var hot: scala.Unit | Hot = js.native
     
     var id: String = js.native
     
@@ -208,7 +207,7 @@ object WebpackModuleApi {
   @js.native
   trait NodeProcess extends StObject {
     
-    var env: js.UndefOr[js.Any] = js.native
+    var env: scala.Unit | js.Any = js.native
   }
   object NodeProcess {
     
@@ -225,7 +224,7 @@ object WebpackModuleApi {
       def setEnv(value: js.Any): Self = StObject.set(x, "env", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def setEnvUndefined: Self = StObject.set(x, "env", js.undefined)
+      def setEnvUndefined: Self = StObject.set(x, "env", ())
     }
   }
   
@@ -257,9 +256,9 @@ object WebpackModuleApi {
     var cache: StringDictionary[js.Any] = js.native
     
     def context(path: String): RequireContext = js.native
-    def context(path: String, deep: js.UndefOr[scala.Nothing], filter: RegExp): RequireContext = js.native
     def context(path: String, deep: Boolean): RequireContext = js.native
     def context(path: String, deep: Boolean, filter: RegExp): RequireContext = js.native
+    def context(path: String, deep: Unit, filter: RegExp): RequireContext = js.native
     
     /**
       * Download additional dependencies on demand. The paths array lists modules that should be available. When they are, callback is called. If the callback is a function expression, dependencies in that source part are extracted and also loaded on demand. A single request is fired to the server, except if all modules are already available.
@@ -297,5 +296,5 @@ object WebpackModuleApi {
   
   type Require2 = js.Function1[/* id */ String, js.Any]
   
-  type RequireLambda = Require1 with Require2
+  type RequireLambda = Require1 & Require2
 }
